@@ -1,0 +1,72 @@
+{
+  "name": "panelsnap",
+  "version": "0.0.0-development",
+  "description": "A JavaScript plugin that provides snapping functionality to a set of panels within your interface.",
+  "main": "lib/panelsnap.cjs.js",
+  "browser": "lib/panelsnap.umd.js",
+  "module": "lib/panelsnap.esm.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guidobouman/panelsnap"
+  },
+  "author": "Guido Bouman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guidobouman/panelsnap/issues"
+  },
+  "homepage": "https://panelsnap.com/",
+  "keywords": [
+    "snap",
+    "snapping",
+    "element",
+    "elements",
+    "panel",
+    "panels",
+    "scroll",
+    "scrolling"
+  ],
+  "dependencies": {
+    "tweezer.js": "^1.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "babel-jest": "^27.0.2",
+    "codacy-coverage": "^3.2.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.4",
+    "rollup": "^2.50.6",
+    "rollup-plugin-license": "^2.4.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "semantic-release": "^17.4.3"
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "lint": "eslint .",
+    "test": "jest --coverage",
+    "report-coverage": "cat ./coverage/lcov.info | codacy-coverage",
+    "semantic-release": "semantic-release",
+    "prepack": "npm run build",
+    "commit": "git-cz"
+  },
+  "browserslist": [
+    "> 0.25%"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
