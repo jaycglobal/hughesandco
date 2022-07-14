@@ -9,7 +9,7 @@
 />
 
 <link href="http://fonts.cdnfonts.com/css/gotham-book" rel="stylesheet">
-<link href="http://fonts.cdnfonts.com/css/evangelina" rel="stylesheet">
+<!-- <link href="http://fonts.cdnfonts.com/css/evangelina" rel="stylesheet"> -->
 
 
 	<?php wp_head(); ?>
@@ -17,6 +17,8 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<div class="menu-activator"><span></span><span></span><span></span></div>
 
 <svg id="menu-activate" class="menu-activator" xmlns="http://www.w3.org/2000/svg" width="54.216" height="33.5" viewBox="0 0 54.216 33.5">
   <g id="Group_9" data-name="Group 9" transform="translate(-43.5 -50)">

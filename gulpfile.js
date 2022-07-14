@@ -39,6 +39,9 @@ gulp.task('bs-reload', function(){
 
 
 // Initialise browserSync
+
+
+// Work
 function init_browserSync() {
     browserSync.init({
         proxy: "http://localhost:8666/hughesco/", // The localhost URL + Port
@@ -52,3 +55,16 @@ function init_browserSync() {
         ]
     });
 }
+
+// Home 
+// function init_browserSync() {
+//     browserSync.init({
+//         proxy: "http://localhost:80/hughesco/",
+//         rewriteRules: [{
+//             match: /localhost:80/g,
+//             fn: function (req, res, match) {
+//                 return 'localhost:3002';
+//             }
+//         }]
+//     });
+// }
