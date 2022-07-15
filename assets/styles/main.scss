@@ -6,17 +6,18 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+    
 }
 
 @font-face {
-   font-family: 'Gotham Book';
-      src: url('../fonts/Gotham Bold/Gotham Bold.otf') format('otf');
+   font-family: 'Gotham Book', sans-serif;
+      src: url('../fonts/Gotham Book Regular 2/Gotham Book Regular.otf') format('otf');
    font-weight: normal;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'Gotham Book';
+   font-family: 'Gotham Book', sans-serif;
       src: url('../fonts/Gotham Bold/Gotham Bold.otf') format('otf');
    font-weight: bold;
    font-style: normal;
@@ -57,6 +58,23 @@
     display: flex;
     align-items: center;
 }
+
+// .bg {
+//     background-size: cover;
+//     background-position: 50% 50%;
+//     &-lg {
+//         min-height: 700px;
+//     }
+//     & .img-wrap {
+//         background-size: cover;
+//         background-position: 50% 50%;
+//         position: relative;
+//         left: 0;
+//         top: 0;
+//         height: 100%;
+//         width: 100%;
+//     }
+// }
 
 
 
@@ -228,10 +246,29 @@ div#site-menu {
     padding: 0px;
     overflow: hidden;
     position: relative;
-    background-size: 110% auto;
+    background-size: cover;
     background-position: 50% 50%;
     transition: 5s background-position linear;
     color: #fff;
+    & .hero-img {
+        width: 120%;
+        background-size: cover;
+        height: 120%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-position: 50% 50%;
+        transition: 1s transform ease;
+    }
+
+    &.moving {
+        &  .hero-img {
+            transition: 10s transform ease;
+        }
+    }
     &  > .container {
         top: 50%;
         transform: translateY(-50%);
@@ -272,7 +309,8 @@ div#site-menu {
 }
 
 section {
-    min-height: 450px;
+    min-height: 550px;
+    
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -341,10 +379,10 @@ section {
             height: 100%;
         }
         & img {
-            position: relative;
-            min-width: 100%;
-            margin: auto;
-            min-height: 100%;
+            // position: relative;
+            // min-width: 100%;
+            // margin: auto;
+            // min-height: 100%;
 
         }
         & .bg {
@@ -355,6 +393,8 @@ section {
             display: flex;
             justify-content: center;
             align-items: center;
+            background-size: cover;
+            background-position: 50% 50%;
             &-lg {
                 max-height: 800px;
                 overflow: hidden;
@@ -380,7 +420,7 @@ section {
         transform: translateY(0%);
         @include headingFont();
         z-index: 0;
-        line-height: 50%;
+        line-height: 100%;
         bottom: 0px;
     }
 
@@ -405,6 +445,7 @@ section {
                 right: auto;
                 left: 0px;
             }
+            
         }
     }
 
@@ -419,6 +460,9 @@ section {
     }
     & img.img-left {
         float: right;
+    }
+    & .bg {
+        overflow: hidden;
     }
    }
 }
@@ -506,14 +550,18 @@ section {
         font-family: 'Gotham Book';
         display: flex;
         align-items: center;
+        width: 60%;
         & .wrapper {
             background: rgb(0 0 0 / 50%);
-            padding: 5em 16em;
+            padding: 5em 0em;
             color: #fff;
-            max-width: 80%;
+            max-width: 100%;
             text-align: center;
             margin: auto;
+            width: 100%;
         }
+
+        
 
 
     }
@@ -944,9 +992,21 @@ footer {
     }
   }
 
+  @media screen and (max-width: 1700px) {
+    // #hero {
+    //     background-size: 125% auto;
+    // }
+
+  }
+
 
   @media screen and (max-width: $gridXL) {
+
+    // #hero {
+    //     background-size: cover;
+    // }
     section {
+        min-height: 450px;
         &.full {
             & h3.jumbo {
                 font-size: 21.7rem;
@@ -964,8 +1024,21 @@ footer {
         }
         & .slider-menu { 
             font-size: 1.8rem;
+            width: 60%;
+            & .wrapper {
+                padding: 3em 0em;
+                max-width: 100%;
+                width: 100%;
+            }
+            
+        }
+
+        & .swiper-pagination-bullet {
+            width: 5%;
         }
     }
+
+    
 
     footer {
         ul {
@@ -1009,6 +1082,15 @@ footer {
                     display: inline-block
                 }
             }
+            &  .content-img {
+                margin-top: 1em;
+            }
+        }
+
+        & .full-width-content--left {
+            & .bg {
+                height: 450px;
+            }
         }
   
     }
@@ -1024,10 +1106,25 @@ footer {
         }
     }
 
-    section.full-width-content--left {
+    .swiper {
+        & .slider-menu {
+            width: 100%;
+        }
+
   
     }
+
     
+
+    .accordion {
+        &  .accord.main-accord {
+            & .accord-content {
+                & .wrap {
+                    padding: 2.8rem;
+                }
+            }
+        }
+    }
     
   }
 
@@ -1040,6 +1137,8 @@ footer {
               
             }
         }
+
+    
     }
 
     div#site-menu {
@@ -1053,23 +1152,21 @@ footer {
         min-height: 350px;
     }
 
+    .swiper {
+        & .swiper-pagination-bullet {
+            width: auto;
+            padding: 6px;
+            border-radius: 50%;
+        }
+    }
+
        .qr-contact>div.qr-code {
         flex: 0 0 100%;
     }
 
-  }
-
-
-  @media screen and (max-width: $gridSM) {
-    p {
-        font-size: 1.6rem;
-    }
-
-    #hero {
-        background-position: 35% 50%;
-        & .hero-excerpt {
-            margin-top: 0rem;
-        }
+    .split-content--right {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     section {
@@ -1085,6 +1182,36 @@ footer {
             top: 0px;
             font-size: 16rem;
         }
+
+    }
+
+
+  }
+
+
+  @media screen and (max-width: $gridSM) {
+
+    
+    p {
+        font-size: 1.6rem;
+    }
+
+    #hero {
+        background-position: 35% 50%;
+        & .hero-excerpt {
+            margin-top: 0rem;
+        }
+    }
+
+    section {
+        &.full {
+            & h3.jumbo {
+                font-size: 10.7rem;
+              
+            }
+        }
+    
+
     }
 
     div#site-menu {
@@ -1093,6 +1220,8 @@ footer {
             border-radius: 0;
         }
     }
+
+
  
     
   }

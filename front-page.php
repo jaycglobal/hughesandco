@@ -85,8 +85,9 @@ and creative solutions for the companies we work with.</p>
       <div class="col-12 col-md-7">
 
       </div>
-      <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-once="false" data-aos-anchor="#section-3">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_3.jpg" alt=""  class="kenburns sm">
+      <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-once="false" data-aos-anchor="#section-3" >
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_3.jpg" alt=""  class="kenburns sm">
+
       </div>
     </div>
   </div>

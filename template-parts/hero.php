@@ -1,5 +1,5 @@
 <div id="hero" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)">
-
+<div class="hero-img"  style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)"></div>
 
   <div class="container">
     <div class="row">
@@ -43,19 +43,75 @@
 
   el.addEventListener("mousemove", function(e) {
     throttle(bgMove(e), 3000)
+ // bgMove(e)
   });
+
+  var bgMoving = false;
 
   function bgMove(e) {
     const el = document.querySelector("#hero");
+    const elBg = el.querySelector(".hero-img");
 
-    const {
-      xCenter,
-      yCenter
-    } = box
-    console.log(xCenter)
-    el.style.backgroundPositionX = (e.offsetX / 50) + 50 + "%";
-    el.style.backgroundPositionY = (e.offsetY / 50) + 50 + "%";
+
+
+    let rect = el.getBoundingClientRect();
+    let x = e.clientX - rect.left; //x position within the element.
+    let y = e.clientY - rect.top;  //y position within the element.
+
+    elBg.style.transform = "translate(" +(mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y)  + "%)";
+    elBg.style.transformOrigin = Math.abs(x) + "px " + Math.abs(y)  + "px";
+
+    
+
+    if (!bgMoving) {
+      bgMoving = true;
+
+      setTimeout(function() {
+      elBg.style.transform = "translate(" +(mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y)  + "%) scale(1.2)";
+      bgMoving = false;
+
+    }, 2000)
+    }
+
+
+    // elBg.style.backgroundPosition = (mousePosFromCenter(e).x) + "% " + (mousePosFromCenter(e).y)  + "% ";
+
+   // elBg.style.backgroundPositionY = (e.offsetY / 50) + 50 + "%";
   }
+
+function mousePosFromCenter(e) {
+    
+    let windowHeight = window.innerHeight
+    let windowWidth = window.innerWidth
+    let xValue = e.x
+    let yValue = e.y
+
+    let mousePosX =  (-1-(xValue/windowWidth)*2) * 2
+    let mousePosY =  (1-(yValue/windowHeight)*2) * 2
+    
+    return {x: mousePosX,y: mousePosY}
+};
+
+
+let inactivityTime = function () {
+  let time;
+  window.onload = resetTimer;
+  document.onmousemove = resetTimer;
+  document.onkeypress = resetTimer;
+  function logout() {
+    el.classList.add('moving')
+
+  }
+  function resetTimer() {
+    el.classList.remove('moving')
+
+    clearTimeout(time);
+    time = setTimeout(logout, 2000)
+  }
+};
+
+inactivityTime();
+
 
   function throttle(callback, limit) {
     var wait = false; // Initially, we're not waiting
