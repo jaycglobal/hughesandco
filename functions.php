@@ -4,7 +4,9 @@
 function hughesco_enqueue_theme_assets() {
 
     wp_enqueue_style('hughesco-css', get_stylesheet_directory_uri() . '/assets/styles/main.min.css');
-   # wp_enqueue_script('panelsnap-js', get_stylesheet_directory_uri() . '/assets/scripts/panelsnap.js', false, false, true);
+    # wp_enqueue_script('panelsnap-js', get_stylesheet_directory_uri() . '/assets/scripts/panelsnap.js', false, false, true);
+    wp_enqueue_script('smooth-scrollbar-js',     'https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js', false, false, true);
+
 
     wp_enqueue_style('aos-css', 'https://unpkg.com/aos@next/dist/aos.css');
 

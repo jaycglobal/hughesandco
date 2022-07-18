@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-6 col-xl-3">
+    <div class="row footer-content">
+      <div class="col-12 col-lg-6 col-xl-3 footer-logo">
         <svg class="site-logo" data-name="Group 52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="471.401" height="238.975" viewBox="0 0 471.401 238.975">
           <defs>
             <clipPath id="clip-path">
@@ -28,16 +28,20 @@
           superyacht sector.
         </p>
       </div>
-      <div class="footer-menu offset-xl-1 col-12 col-lg-6 col-xl-2">
+      <div class="footer-menu offset-xl-1 col-12 col-md-6 col-xl-2">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Menu</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+
+          <li><a href="#">Privacy Policy</a></li>
+
         </ul>
       </div>
-      <div class="col-12 col-lg-6 col-xl-3">
+      <div class="col-12 col-md-6 col-xl-3">
         <div class="footer-contact">
           <div class="contact-info">
             <p class="footer-title">Contact:</p>
@@ -69,18 +73,10 @@
       </div>
     </div>
     <div class="row under-footer">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 ">
         <p class="copyright">© Copyright Hughes & Co. 2022. All rights reserved.</p>
       </div>
-      <div class="col-6 col-lg-3">
-        <p>Terms & Conditions</p>
-      </div>
-      <div class="col-6 col-lg-3">
-        <p>Privacy Policy</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-lg-6">
+      <div class="col-12">
         <p class="copyright-excerpt">Website designed and created by Global.</p>
       </div>
     </div>
@@ -113,6 +109,10 @@
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // var Scrollbar = window.Scrollbar;
+
+  // Scrollbar.init(document.querySelector('.page-wrap'));
 
 
   swiper.on('transitionEnd', function() {

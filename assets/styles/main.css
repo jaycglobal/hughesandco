@@ -13,7 +13,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Gotham Book", sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   src: url("../fonts/Gotham Bold/Gotham Bold.otf") format("otf");
   font-weight: bold;
   font-style: normal;
@@ -6546,9 +6546,28 @@ html {
   box-sizing: border-box;
 }
 
-p {
+p,
+a,
+input {
   font-size: 2.2rem;
   font-family: "Gotham Book", sans-serif;
+}
+p strong, p b,
+a strong,
+a b,
+input strong,
+input b {
+  font-family: "Gotham Bold", sans-serif;
+}
+
+a {
+  -webkit-transition: 0.3s color ease-in-out;
+  -o-transition: 0.3s color ease-in-out;
+  -moz-transition: 0.3s color ease-in-out;
+  transition: 0.3s color ease-in-out;
+}
+a:hover {
+  color: #1bacb5;
 }
 
 img {
@@ -6639,6 +6658,7 @@ div#site-menu .wrap .site-logo {
   width: 90%;
   height: auto;
   pointer-events: none;
+  height: auto;
 }
 div#site-menu .wrap ul {
   padding: 0px;
@@ -6738,20 +6758,20 @@ div#site-menu .wrap h4 {
   bottom: 0;
   right: 0;
   background-position: 50% 50%;
-  -webkit-transition: 1s -webkit-transform ease;
-  transition: 1s -webkit-transform ease;
-  -o-transition: 1s -o-transform ease;
-  -moz-transition: 1s transform ease, 1s -moz-transform ease;
-  transition: 1s transform ease;
-  transition: 1s transform ease, 1s -webkit-transform ease, 1s -moz-transform ease, 1s -o-transform ease;
+  -webkit-transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
+  transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
+  -o-transition: 8s -o-transform ease, 8s -o-transform-origin ease;
+  -moz-transition: 8s transform ease, 8s transform-origin ease, 8s -moz-transform ease, 8s -moz-transform-origin ease;
+  transition: 8s transform ease, 8s transform-origin ease;
+  transition: 8s transform ease, 8s transform-origin ease, 8s -webkit-transform ease, 8s -moz-transform ease, 8s -o-transform ease, 8s -webkit-transform-origin ease, 8s -moz-transform-origin ease, 8s -ms-transform-origin ease, 8s -o-transform-origin ease;
 }
 #hero.moving .hero-img {
-  -webkit-transition: 10s -webkit-transform ease;
-  transition: 10s -webkit-transform ease;
-  -o-transition: 10s -o-transform ease;
-  -moz-transition: 10s transform ease, 10s -moz-transform ease;
-  transition: 10s transform ease;
-  transition: 10s transform ease, 10s -webkit-transform ease, 10s -moz-transform ease, 10s -o-transform ease;
+  -webkit-transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
+  transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
+  -o-transition: 8s -o-transform ease, 8s -o-transform-origin ease;
+  -moz-transition: 8s transform ease, 8s transform-origin ease, 8s -moz-transform ease, 8s -moz-transform-origin ease;
+  transition: 8s transform ease, 8s transform-origin ease;
+  transition: 8s transform ease, 8s transform-origin ease, 8s -webkit-transform ease, 8s -moz-transform ease, 8s -o-transform ease, 8s -webkit-transform-origin ease, 8s -moz-transform-origin ease, 8s -ms-transform-origin ease, 8s -o-transform-origin ease;
 }
 #hero > .container {
   top: 50%;
@@ -6941,7 +6961,7 @@ section.half {
 }
 section h2.xl {
   position: absolute;
-  font-size: 317px;
+  font-size: 31.7em;
   color: #393939;
   margin: 0px;
   padding: 0px;
@@ -6972,6 +6992,18 @@ section.split-content--right h2.xl {
   right: auto;
   left: 0px;
 }
+section.split-content--left img, section.split-content--right img {
+  position: absolute;
+  height: 100%;
+  max-width: unset;
+}
+section.split-content--left .content, section.split-content--right .content {
+  position: absolute;
+  bottom: 7.5em;
+}
+section.split-content--left .content p, section.split-content--right .content p {
+  font-size: 2.2em;
+}
 section.full-width-content--left .content {
   padding: 0rem 10rem;
   display: -webkit-box;
@@ -6999,6 +7031,8 @@ section.full-width-content--left .content {
 }
 section.full-width-content--left img.img-left {
   float: right;
+  height: 100%;
+  max-width: unset;
 }
 section.full-width-content--left .bg {
   overflow: hidden;
@@ -7200,6 +7234,10 @@ section.full-width-content--left .bg {
   right: 2rem;
   max-width: 20px;
 }
+.accordion .accord .accord-wrap:hover rect, .accordion .accord .accord-wrap:hover p.accord-title {
+  fill: #1bacb5;
+  color: #1bacb5;
+}
 .accordion .accord .accord-content {
   display: none;
 }
@@ -7326,7 +7364,7 @@ section.full-width-content--left .bg {
   align-items: center;
 }
 .accordion .accord.viewed .accord-title {
-  color: grey;
+  color: grey !important;
 }
 .accordion .accord.viewed svg.accord-activate rect {
   fill: grey !important;
@@ -7344,6 +7382,12 @@ section.full-width-content--left .bg {
 }
 .accordion.open .main-accord {
   opacity: 1;
+}
+.accordion rect, .accordion p.accord-title {
+  -webkit-transition: 0.3s color ease-in-out, 0.3s fill ease-in-out;
+  -o-transition: 0.3s color ease-in-out, 0.3s fill ease-in-out;
+  -moz-transition: 0.3s color ease-in-out, 0.3s fill ease-in-out;
+  transition: 0.3s color ease-in-out, 0.3s fill ease-in-out;
 }
 
 .qr-contact {
@@ -7386,10 +7430,11 @@ footer {
   color: #fff;
   padding: 18rem 0rem 3.5rem 0rem;
 }
-footer .site-logo {
+footer .footer-logo .site-logo {
   max-width: 100%;
   position: relative;
   top: -35px;
+  height: auto;
 }
 footer p {
   margin: 0;
@@ -7408,7 +7453,6 @@ footer ul li {
 footer ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 2.2rem;
   font-family: "Gotham Book", sans-serif;
 }
 footer .contact-info {
@@ -7430,7 +7474,6 @@ footer .footer-form .wrap p.footer-title {
 }
 footer .footer-form .wrap input {
   width: 100%;
-  font-size: 2.2rem;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -7473,12 +7516,12 @@ footer .under-footer {
   border-top: 3px solid #1BACB5;
   margin-top: 9rem;
   padding-top: 3rem;
+  font-size: 1rem;
 }
 footer .under-footer p {
   margin: 0;
 }
 footer .under-footer p.copyright-excerpt {
-  font-size: 1.6rem;
   margin-top: 1rem;
 }
 
@@ -7617,6 +7660,11 @@ footer .under-footer p.copyright-excerpt {
     /* Firefox */
   }
 }
+@media screen and (max-width: 1700px) {
+  section.split-content--left, section.split-content--right {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (max-width: 1430px) {
   section {
     min-height: 450px;
@@ -7626,6 +7674,9 @@ footer .under-footer p.copyright-excerpt {
   }
   section.lg {
     min-height: unset;
+  }
+  section.split-content--left, section.split-content--right {
+    font-size: 0.6rem;
   }
   .swiper.full-screen-slider {
     height: 450px;
@@ -7646,8 +7697,11 @@ footer .under-footer p.copyright-excerpt {
   footer ul li {
     margin-bottom: 4rem;
   }
-  footer .row > div {
+  footer .footer-content > div {
     margin-bottom: 3rem;
+  }
+  footer .footer-content > div:last-child {
+    margin-bottom: 0px;
   }
   footer .site-logo {
     top: 0;
@@ -7664,6 +7718,9 @@ footer .under-footer p.copyright-excerpt {
   }
 }
 @media screen and (max-width: 992px) {
+  section {
+    min-height: 350px;
+  }
   section.full h3.jumbo {
     font-size: 18.7rem;
   }
@@ -7675,6 +7732,34 @@ footer .under-footer p.copyright-excerpt {
   }
   section .full-width-content--left .bg {
     height: 450px;
+  }
+  section.full-width-content--left img.img-left {
+    height: auto;
+    width: 100%;
+    max-width: unset;
+  }
+  section#section-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  section.split-content,
+section.split-content .bg {
+    padding: 0em 0em 0em 0em;
   }
   div#site-menu {
     font-size: 0.8rem;
@@ -7690,6 +7775,9 @@ footer .under-footer p.copyright-excerpt {
   }
 }
 @media screen and (max-width: 768px) {
+  #hero > .container {
+    min-height: unset;
+  }
   section.full h3.jumbo {
     font-size: 14.7rem;
   }
@@ -7745,19 +7833,68 @@ footer .under-footer p.copyright-excerpt {
     top: 0px;
     font-size: 16rem;
   }
+  section.split-content--left .bg .bg, section.split-content--right .bg .bg {
+    min-height: 350px;
+  }
+  section.split-content--left img, section.split-content--right img {
+    height: auto;
+    max-width: unset;
+    width: 110%;
+  }
+  section.split-content--left .container, section.split-content--right .container {
+    padding: 2rem 12px;
+  }
+  footer {
+    padding-top: 10rem;
+  }
+  footer .footer-logo .site-logo {
+    max-width: 60%;
+  }
+  footer p.footer-title {
+    margin-bottom: 1.8rem;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-top: 2px solid #2eadb4;
+    border-bottom: 2px solid #2eadb4;
+    padding-top: 4rem;
+  }
+  footer ul li {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  footer .under-footer {
+    border-top: 3px solid #1bacb5;
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+  }
 }
 @media screen and (max-width: 576px) {
-  p {
+  p,
+a,
+input {
     font-size: 1.6rem;
   }
   #hero {
     background-position: 35% 50%;
   }
   #hero .hero-excerpt {
-    margin-top: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
   section.full h3.jumbo {
     font-size: 10.7rem;
+  }
+  section.split-content--left .bg .bg, section.split-content--right .bg .bg {
+    min-height: 300px;
   }
   div#site-menu {
     padding: 0rem;
@@ -7766,6 +7903,10 @@ footer .under-footer p.copyright-excerpt {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+  }
+  section.full-width-content--left img.img-left {
+    height: 100%;
+    width: auto;
   }
 }
 @media screen and (max-height: 1000px) {

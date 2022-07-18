@@ -1,5 +1,5 @@
 <div id="hero" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)">
-<div class="hero-img"  style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)"></div>
+  <div class="hero-img" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)"></div>
 
   <div class="container">
     <div class="row">
@@ -36,14 +36,25 @@
 <script>
   const el = document.querySelector("#hero");
   const box = getBoundingBox(el)
-  const {
-    xCenter,
-    yCenter
-  } = box
+  var totalDistance = 0;
+  var oldCursorX, oldCursorY;
 
   el.addEventListener("mousemove", function(e) {
-    throttle(bgMove(e), 3000)
- // bgMove(e)
+
+    var cursorThreshold = 1000;
+
+    if (oldCursorX) totalDistance += Math.sqrt(Math.pow(oldCursorY - e.clientY, 2) + Math.pow(oldCursorX - e.clientX, 2));
+    if (totalDistance >= cursorThreshold) {
+      console.log("Mouse moved 100px!");
+      bgMove(e)
+      totalDistance = 0;
+    }
+
+    oldCursorX = e.clientX;
+    oldCursorY = e.clientY;
+
+
+    // bgMove(e)
   });
 
   var bgMoving = false;
@@ -56,61 +67,66 @@
 
     let rect = el.getBoundingClientRect();
     let x = e.clientX - rect.left; //x position within the element.
-    let y = e.clientY - rect.top;  //y position within the element.
+    let y = e.clientY - rect.top; //y position within the element.
 
-    elBg.style.transform = "translate(" +(mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y)  + "%)";
-    elBg.style.transformOrigin = Math.abs(x) + "px " + Math.abs(y)  + "px";
+    elBg.style.transform = "translate(" + (mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y) + "%) scale(1)";
+    elBg.style.transformOrigin = Math.abs(x) + "px " + Math.abs(y) + "px";
 
-    
+
 
     if (!bgMoving) {
       bgMoving = true;
 
       setTimeout(function() {
-      elBg.style.transform = "translate(" +(mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y)  + "%) scale(1.2)";
-      bgMoving = false;
+        elBg.style.transform = "translate(" + (mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y) + "%) scale(1.2)";
+        bgMoving = false;
 
-    }, 2000)
+      }, 2000)
     }
 
 
     // elBg.style.backgroundPosition = (mousePosFromCenter(e).x) + "% " + (mousePosFromCenter(e).y)  + "% ";
 
-   // elBg.style.backgroundPositionY = (e.offsetY / 50) + 50 + "%";
+    // elBg.style.backgroundPositionY = (e.offsetY / 50) + 50 + "%";
   }
 
-function mousePosFromCenter(e) {
-    
+  function mousePosFromCenter(e) {
+
     let windowHeight = window.innerHeight
     let windowWidth = window.innerWidth
     let xValue = e.x
     let yValue = e.y
 
-    let mousePosX =  (-1-(xValue/windowWidth)*2) * 2
-    let mousePosY =  (1-(yValue/windowHeight)*2) * 2
-    
-    return {x: mousePosX,y: mousePosY}
-};
+    let mousePosX = (-1 - (xValue / windowWidth) * 2) * 2
+    let mousePosY = (1 - (yValue / windowHeight) * 2) * 2
+
+    return {
+      x: mousePosX,
+      y: mousePosY
+    }
+  };
 
 
-let inactivityTime = function () {
-  let time;
-  window.onload = resetTimer;
-  document.onmousemove = resetTimer;
-  document.onkeypress = resetTimer;
-  function logout() {
-    el.classList.add('moving')
+  let inactivityTime = function() {
+    let time;
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
 
-  }
-  function resetTimer() {
-    el.classList.remove('moving')
+    function logout() {
+      el.classList.add('moving')
 
-    clearTimeout(time);
-    time = setTimeout(logout, 2000)
-  }
-};
+    }
 
-inactivityTime();
+    function resetTimer() {
+      el.classList.remove('moving')
+
+      clearTimeout(time);
+      time = setTimeout(logout, 2000)
+    }
+  };
+
+  inactivityTime();
 
 
   function throttle(callback, limit) {
@@ -143,12 +159,12 @@ inactivityTime();
   }
 
 
-  el.addEventListener("mousemove", (e) => {
+  // el.addEventListener("mousemove", (e) => {
 
-    // e = Mouse click event.
-    var rect = e.target.getBoundingClientRect();
-    var x = e.clientX - rect.left; //x position within the element.
-    var y = e.clientY - rect.top; //y position within the element.
-    console.log("Left? : " + (x + (e.target.offsetWidth / 2)) + " ; Top? : " + y + ".");
-  })
+  //   // e = Mouse click event.
+  //   var rect = e.target.getBoundingClientRect();
+  //   var x = e.clientX - rect.left; //x position within the element.
+  //   var y = e.clientY - rect.top; //y position within the element.
+  //   console.log("Left? : " + (x + (e.target.offsetWidth / 2)) + " ; Top? : " + y + ".");
+  // })
 </script>
