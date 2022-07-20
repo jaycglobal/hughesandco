@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <a href="#section-1" class="gbc-scroll ">
+  <a href="#section-1" class="gbc-scroll">
 
     <svg class="next-section-scroll  pulsate-bck" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
       <g id="Group_53" data-name="Group 53" transform="translate(-1772 -949)">

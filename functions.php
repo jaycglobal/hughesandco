@@ -3,6 +3,8 @@
 
 function hughesco_enqueue_theme_assets() {
 
+    hughesco_enqueue_pre_load_fonts();
+
     wp_enqueue_style('hughesco-css', get_stylesheet_directory_uri() . '/assets/styles/main.min.css');
     # wp_enqueue_script('panelsnap-js', get_stylesheet_directory_uri() . '/assets/scripts/panelsnap.js', false, false, true);
     wp_enqueue_script('smooth-scrollbar-js',     'https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js', false, false, true);
@@ -19,11 +21,33 @@ function hughesco_enqueue_theme_assets() {
     wp_dequeue_style( 'global-styles' );
 
 
-    
-
 }
 
 add_action( 'wp_enqueue_scripts', 'hughesco_enqueue_theme_assets', 9999 );
+
+function hughesco_pre_load_font($preconnect = false, $cdn=false){
+    if (!$cdn) { return; } 
+
+    if ($preconnect) {
+        echo ' <link rel="preconnect" href="'.$preconnect.'" crossorigin />';
+    }
+
+    echo '<link rel="preload" as="style" href="'.$cdn.'" />';
+
+    echo '<link rel="stylesheet" href="'.$cdn.'" media="print" onload="this.media=\'all\'" />';
+
+    echo '<noscript><link rel="stylesheet" href="'.$cdn.'" /></noscript>';
+}
+
+function hughesco_enqueue_pre_load_fonts() {
+
+    hughesco_pre_load_font(
+        'http://fonts.cdnfonts.com/',
+        'http://fonts.cdnfonts.com/css/evangelina'
+    );
+
+}
+
 
 // Add title tag
 add_theme_support( 'title-tag' );

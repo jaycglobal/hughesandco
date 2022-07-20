@@ -54,11 +54,33 @@ for (let i = 0; i < accordions.length; i++) {
   
 }
 
-function loadAccord() {
+var accordLinks = document.querySelectorAll('a[data-accordlink]');
 
+for (let index = 0; index < accordLinks.length; index++) {
+  const accordLink = accordLinks[index];
 
+  accordLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log(e.target.dataset.accordlink);
+
+    let serviceName = e.target.dataset.accordlink;
+
+    activateAccordLink(serviceName);
+
+  })
   
-  if (this.classList.contains('main-accord')) {
+}
+
+function loadAccord(clickedEl) {
+  if (clickedEl.el instanceof Element || clickedEl.el instanceof HTMLDocument  ) {
+    clickedAccord = clickedEl.el;
+  } else {
+    clickedAccord = this;
+  }
+
+
+
+  if (clickedAccord.classList.contains('main-accord')) {
     // Close accordion
     openMainAccordContent();
     setTimeout(function(){ accordionSection.classList.toggle('open'); mainAccordion.classList.toggle('open'); }, 500)
@@ -71,8 +93,8 @@ function loadAccord() {
   }
 
   // Clicked accordion vars
-  let clickedAccord = this,
-  clickedAccordTitle = clickedAccord.querySelector('p.accord-title'),
+
+  clickedAccordTitle = clickedAccord.querySelector('p.accord-title');
   clickedAccordContent = clickedAccord.querySelector('div.accord-content');
 
   // Set main accordion content
@@ -84,15 +106,41 @@ function loadAccord() {
 
   }
 
-  if (window.innerWidth <= 1000) {
     window.scroll({
       top: getOffsetTop(document.querySelector('section.accordion')), 
       left: 0, 
       behavior: 'smooth'
     });
-  }
+  
+}
+
+function activateAccordLink(link) {
 
 
+    window.scroll({
+      top: getOffsetTop(document.querySelector('section.accordion')), 
+      left: 0, 
+      behavior: 'smooth'
+    });
+
+    if ( accordionSection.classList.contains('open')    ) {
+      openMainAccordContent();
+      setTimeout(function(){ accordionSection.classList.toggle('open'); mainAccordion.classList.toggle('open'); }, 500)
+    }
+
+    if (  document.getElementById('site-menu').classList.contains('open')    ) {
+      openMainMenu();
+
+    }
+
+
+
+    setTimeout(function(){
+      loadAccord( {
+        el: document.querySelector('.accord[data-accord="'+link+'"]')
+      } );
+    }, 1000)
+  
 }
 
 
@@ -105,7 +153,7 @@ function openMainAccordContent() {
 }
 
 /* Main Menu */
-var menuActivators = document.querySelectorAll('div.menu-activator');
+var menuActivators = document.querySelectorAll('.menu-activator');
 console.log(menuActivators)
 for (let index = 0; index < menuActivators.length; index++) {
   const activator = menuActivators[index];
@@ -115,10 +163,16 @@ for (let index = 0; index < menuActivators.length; index++) {
 
 function openMainMenu(e){
 
-    e.stopPropagation();
-    e.preventDefault();
+    try {
+      e.stopPropagation();
+      e.preventDefault();
+    } catch (error) {
+      
+    }
+  
   document.getElementById('site-menu').classList.toggle('open')
-  this.querySelector('input[type="checkbox"]').checked = !this.querySelector('input[type="checkbox"]').checked;
-  this.classList.toggle('open')
-  console.log('opening')
+  document.body.classList.toggle('open-menu')
+
+  document.getElementById('menu-activator').querySelector('input[type="checkbox"]').checked = !document.getElementById('menu-activator').querySelector('input[type="checkbox"]').checked;
+  document.getElementById('menu-activator').classList.toggle('open')
 }

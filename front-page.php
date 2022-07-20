@@ -11,6 +11,7 @@
 
       </div>
       <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-1" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/monaco.jpg)">
+
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_1.jpg" alt="" class="kenburns sm">
       </div>
     </div>
@@ -49,10 +50,10 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-7">
+      <div class="col-12 col-md-6">
 
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-6">
         <h2 class="xl" data-aos-once="false" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">Time</h2>
         <div class="content" data-aos-once="false" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2" data-aos-delay="500">
           <p>When time is limited, you need marketing
@@ -106,10 +107,12 @@
 
       </div>
       <div class="col-12 col-xl-4  order-1 order-xl-2 content aos-init aos-animate" data-aos-once="false" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="500">
-        <p><strong>Knowledge is power.</strong> Our experience working with superyacht owners, designers, shipyards, charter and brokerage companies, and the wider supply chain gives us an in-depth understanding of the industry and the integral part each company plays. </p>
-        <p><strong>Leading with confidence,</strong> we help you to navigate the myriad of marketing options available and guide you in making informed, effective decisions. We turn your objectives into impactful, engaging and fundamentally successful campaigns, helping you reach the desired audience with efficiency.
-
-        </p>
+<div class="wrap">
+  
+          <p><strong>Knowledge is power.</strong><br /> Our experience working with superyacht owners, designers, shipyards, charter and brokerage companies, and the wider supply chain gives us an in-depth understanding of the industry and the integral part each company plays. </p>
+          <br />
+          <p><strong>Leading with confidence,</strong><br /> we help you to navigate the myriad of marketing options available and guide you in making informed, effective decisions. We turn your objectives into impactful, engaging and fundamentally successful campaigns, helping you reach the desired audience with efficiency.</p>
+</div>
       </div>
       <div class="col-12 col-xl-4  order-3 order-xl-3 content aos-init aos-animate" data-aos-once="false" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="700">
         <p>
@@ -129,7 +132,8 @@
 
     <div class="wrapper">
       <div id="slide-name">
-        Consultancy
+        <p><a href="#" data-accordlink="<?php echo sanitize_title_with_dashes('Marketing & PR Communications'); ?>">Marketing & PR Communications</a></p>
+
       </div>
     </div>
     <div class="swiper-button-next"></div>
@@ -139,41 +143,41 @@
   <div class="swiper-wrapper h-100">
 
     <!-- Slides -->
+    <div class="swiper-slide" data-slidename="Marketing & PR Communications">
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/main_slider.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/main_slider.webp)"></div>
+    </div>
     <div class="swiper-slide" data-slidename="Consultancy">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/main_slider.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_2.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_2.webp);"></div>
     </div>
-    <div class="swiper-slide" data-slidename="Slide 2">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_2.jpg)"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 3">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_3.jpg)"></div>
+    <div class="swiper-slide" data-slidename="Charter & Sales Marketing" >
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_3.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_3.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 4">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_4.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_4.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_4.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 5">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_5.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_5.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_5.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 6">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_6.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_6.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_6.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 7">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_7.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_7.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_7.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 8">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_8.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_8.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_8.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 9">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_9.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_9.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_9.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 10">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_10.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_10.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_10.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 11">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_11.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_11.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_11.webp);"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 12">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_12.jpg)"></div>
+      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_12.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_12.webp);"></div>
     </div>
 
 
@@ -190,7 +194,7 @@
 </div>
 
 
-<section class="full">
+<section class="full" id="about-section">
   <div class="container">
     <h3 class="jumbo text-center">About</h3>
 
@@ -225,7 +229,7 @@
 
 
 
-<section class="accordion full" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/services.jpg)">
+<section class="accordion full" id="services-section" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/services.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/services.webp);">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -250,7 +254,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
+      <div class="col-12 col-md-6 col-lg-4 accord"  data-accord="<?php echo sanitize_title_with_dashes('Marketing & PR Communications'); ?>">
         <div class="accord-wrap h-100">
           <p class="accord-title">Marketing & PR Communications</p>
           <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
@@ -266,7 +270,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
+      <div class="col-12 col-md-6 col-lg-4 accord"  data-accord="<?php echo sanitize_title_with_dashes('Consultancy'); ?>">
         <div class="accord-wrap h-100">
           <p class="accord-title">Consultancy</p>
           <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
@@ -299,7 +303,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
+      <div class="col-12 col-md-6 col-lg-4 accord"  data-accord="<?php echo sanitize_title_with_dashes('Charter & Sales Marketing'); ?>">
         <div class="accord-wrap h-100">
           <p class="accord-title">Charter & Sales Marketing</p>
           <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
@@ -473,7 +477,7 @@
   </div>
 </section>
 
-<section class="contact full" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact.jpg)">
+<section class="contact full" id="contact-section" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact.jpg)">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
