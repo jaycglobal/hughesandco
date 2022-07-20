@@ -47,18 +47,17 @@
             <p class="footer-title">Contact:</p>
 
             <p>
-              hello@roxannehughes.com</p>
-            <p>+44 (0) 7713 891 945 </p>
+              <a href="mailto:hello@roxannehughes.com">hello@roxannehughes.com</a>
             </p>
+            <p><a href="tel:+44 (0) 7713 891 945">+44 (0) 7713 891 945</a> </p>
+
           </div>
 
           <div class="contact-social">
             <p class="footer-title">Follow us on social media:</p>
+            <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/svg/fb.svg'); ?>
 
-            <p>
-              hello@roxannehughes.com</p>
-            <p>+44 (0) 7713 891 945 </p>
-            </p>
+
           </div>
         </div>
 
@@ -85,7 +84,6 @@
 
 <?php get_template_part('/template-parts/menu/main'); ?>
 
-
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <?php wp_footer(); ?>
@@ -110,9 +108,12 @@
     },
   });
 
-  // var Scrollbar = window.Scrollbar;
+  var Scrollbar = window.Scrollbar;
 
-  // Scrollbar.init(document.querySelector('.page-wrap'));
+  Scrollbar.init(document.querySelector('.page-wrap'));
+
+  document.querySelector('.page-wrap').addEventListener('wheel', AOS.refresh);
+
 
 
   swiper.on('transitionEnd', function() {

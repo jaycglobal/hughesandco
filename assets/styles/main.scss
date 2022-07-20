@@ -97,6 +97,7 @@ a,
 input {
     font-size: 2.2rem;
     @include bodyFont();
+    line-height: 3rem;
 
     & strong,
     & b {
@@ -106,9 +107,14 @@ input {
 
 a {
     transition: 0.3s color ease-in-out;
+    color: inherit;
+    text-decoration: none;
 
     &:hover {
         color: #1bacb5;
+        & svg {
+            fill: #1bacb5;
+        }
     }
 }
 
@@ -129,13 +135,154 @@ img {
     }
 }
 
-svg#menu-activate {
-    position: absolute;
-    top: 5rem;
-    left: 5rem;
+
+.sr-hide { 
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+
+circle {
+    fill: #fff3;
+    opacity: 0;
+}
+
+.menu--1 input:checked+svg {
+  & .line--1,
+  & .line--3 {
+    --length: 22.627416998;
+  }
+  & .line--2 {
+    --length: 0;
+  }
+}
+
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+.menu--1 .line--2 {
+    --total-length: 70;
+}
+.menu--1 .line--2 {
+    --total-length: 70;
+}
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+
+
+.menu--1 input:checked+svg .line--1, .menu--1 input:checked+svg .line--3 {
+    --offset: -94.1149185097;
+}
+.cross input:checked+svg .line--1, .cross input:checked+svg .line--3 {
+    --length: 22.627416998;
+}
+
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+.line--debug {
+    opacity: 0;
+    stroke-dasharray: none;
+}
+.menu--1 input:checked+svg .line--1, .menu--1 input:checked+svg .line--3 {
+    --offset: -94.1149185097;
+}
+.cross input:checked+svg .line--1, .cross input:checked+svg .line--3 {
+    --length: 22.627416998;
+}
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+
+.menu--1 input:checked+svg .line--2 {
+    --offset: -50;
+}
+.cross input:checked+svg .line--2 {
+    --length: 0;
+}
+.menu--1 .line--2 {
+    --total-length: 70;
+}
+.menu--1 input:checked+svg .line--2 {
+    --offset: -50;
+}
+.cross input:checked+svg .line--2 {
+    --length: 0;
+}
+.menu--1 .line--2 {
+    --total-length: 70;
+}
+.menu--1 input:checked+svg .line--1, .menu--1 input:checked+svg .line--3 {
+    --offset: -94.1149185097;
+}
+
+.cross input:checked+svg .line--1, .cross input:checked+svg .line--3 {
+    --length: 22.627416998;
+}
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+
+.menu--1 input:checked+svg .line--1, .menu--1 input:checked+svg .line--3 {
+    --offset: -94.1149185097;
+}
+
+.cross input:checked+svg .line--1, .cross input:checked+svg .line--3 {
+    --length: 22.627416998;
+}
+.menu--1 .line--1, .menu--1 .line--3 {
+    --total-length: 126.64183044433594;
+}
+.menu-activator {
+        position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
     z-index: 20;
     cursor: pointer;
+    width: 150px;
+    & input {
+        display: none;
+    }
+    & svg {
+            transform: scale(2);
+    }
+    & path {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        --length: 24;
+        --offset: -38;
+        stroke-dasharray: var(--length) var(--total-length);
+        stroke-dashoffset: var(--offset);
+        transition: all .8s cubic-bezier(.645, .045, .355, 1);
+    }
+
+    &.open {
+        position: fixed;
+        & path {
+            stroke: #000000;
+        }
+    }
 }
+
+
+
 
 div#site-menu {
     position: fixed;
@@ -481,6 +628,10 @@ section {
         position: relative;
         margin-bottom: 0px;
         margin-top: 1rem;
+
+        &:nth-child(1) {
+            margin-top: 0px;
+        }
     }
 
     &.split-content {
@@ -517,6 +668,7 @@ section {
 
                 & p {
                     font-size: 2.2em;
+
                 }
             }
         }
@@ -534,13 +686,33 @@ section {
         }
 
         & img.img-left {
-            float: right;
-            height: 100%;
+            float: none;
+            min-height: 100%;
+            max-height: 600px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
             max-width: unset;
         }
 
         & .bg {
             overflow: hidden;
+        }
+
+        & .bg-lg {
+            min-height: 500px;
+        }
+    }
+
+    &.page-break {
+        min-height: unset;
+        background: #1BACB5;
+        & h2 {
+            margin: 15rem auto;
+        }
+        & svg {
+           width: 100%;
         }
     }
 }
@@ -708,7 +880,7 @@ section {
 
                 &:hover {
 
-                    & rect,
+                    &>svg.accord-activate rect,
                     & p.accord-title {
                         fill: #1bacb5;
                         color: #1bacb5;
@@ -753,6 +925,8 @@ section {
                     min-height: 120px;
 
                 }
+
+                &:hover {}
             }
 
             & .accord-activate {
@@ -808,12 +982,12 @@ section {
 
         &.viewed {
             & .accord-title {
-                color: grey !important;
+                color: grey;
             }
 
             & svg.accord-activate {
                 & rect {
-                    fill: grey !important;
+                    fill: grey;
                 }
             }
         }
@@ -859,7 +1033,6 @@ section {
 
         &.qr-excerpt {
             flex: 0 0 100%;
-            padding-top: 1rem;
 
             & p {
                 margin: 0;
@@ -868,8 +1041,15 @@ section {
 
         &.contact-details {
             & .wrap {
-                padding-left: 1rem;
             }
+        }
+    }
+
+    & .qr-code {
+        & img {
+                            padding-bottom: 2.5rem;
+                            padding-right: 2.5rem;
+
         }
     }
 
@@ -924,6 +1104,12 @@ footer {
 
     }
 
+    & .contact-social {
+        & a.social-link {
+    margin-right: 3.5rem;
+}
+    }
+
     & .footer-form {
         justify-content: center;
 
@@ -968,10 +1154,13 @@ footer {
         margin-top: 9rem;
         padding-top: 3rem;
         font-size: 1rem;
+
         & p {
             margin: 0;
+
             &.copyright-excerpt {
                 margin-top: 1rem;
+                    font-size: 1.6rem;
             }
         }
     }
@@ -1117,6 +1306,59 @@ footer {
     }
 }
 
+
+svg.social-bubble .svg-elem-1 {
+  stroke-dashoffset: 170.8280029296875px;
+  stroke-dasharray: 170.8280029296875px;
+          transition: stroke-dashoffset .6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+svg.social-bubble:hover .svg-elem-1 {
+  stroke-dashoffset: 0;
+}
+
+svg.social-bubble .svg-elem-2 {
+  stroke-dashoffset: 17.52523899078369px;
+  stroke-dasharray: 17.52523899078369px;
+          transition: stroke-dashoffset .6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+svg.social-bubble:hover .svg-elem-2 {
+  stroke-dashoffset: 0;
+}
+
+svg.social-bubble .svg-elem-3 {
+  stroke-dashoffset: 37.933998107910156px;
+  stroke-dasharray: 37.933998107910156px;
+          transition: stroke-dashoffset .6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+svg.social-bubble:hover .svg-elem-3 {
+  stroke-dashoffset: 0;
+}
+
+svg.social-bubble .svg-elem-4 {
+  stroke-dashoffset: 75.51885223388672px;
+  stroke-dasharray: 75.51885223388672px;
+          transition: stroke-dashoffset .6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+svg.social-bubble:hover .svg-elem-4 {
+  stroke-dashoffset: 0;
+}
+
+svg.social-bubble .svg-elem-5 {
+  stroke-dashoffset: 128.2920246743097px;
+  stroke-dasharray: 128.2920246743097px;
+          transition: stroke-dashoffset .6s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+svg.social-bubble:hover .svg-elem-5 {
+  stroke-dashoffset: 0;
+}
+
+
+
 @media screen and (max-width: 1700px) {
     // #hero {
     //     background-size: 125% auto;
@@ -1140,6 +1382,12 @@ footer {
 
 @media screen and (max-width: $gridXL) {
 
+    p,
+    a,
+    input {
+        line-height: 130%;
+    }
+
     // #hero {
     //     background-size: cover;
     // }
@@ -1150,6 +1398,8 @@ footer {
             & h3.jumbo {
                 font-size: 21.7rem;
             }
+
+
         }
 
         &.lg {
@@ -1163,6 +1413,13 @@ footer {
                 font-size: .6rem;
             }
 
+        }
+
+        &.full-width-content--left {
+            & img.img-left {
+                max-height: unset;
+                width: 100%;
+            }
         }
     }
 
@@ -1227,12 +1484,21 @@ footer {
             overflow: hidden;
         }
     }
+
+    .qr-contact {
+        &>div.contact-details {
+            & .wrap {
+                padding-left: 0rem;
+            }
+        }
+
+    }
 }
 
 @media screen and (max-width: $gridLG) {
 
     section {
-                    min-height: 350px;
+        min-height: 350px;
 
         &.full {
             & h3.jumbo {
@@ -1244,7 +1510,7 @@ footer {
             }
 
             & .content-img {
-                margin-top: 1em;
+                margin: 2em auto;
             }
         }
 
@@ -1256,6 +1522,10 @@ footer {
 
         &.full-width-content {
             &--left {
+                & .bg-lg {
+                    min-height: 350px;
+                }
+
                 & img.img-left {
                     height: auto;
                     width: 100%;
@@ -1308,6 +1578,9 @@ footer {
             }
         }
     }
+
+
+
 
 }
 
@@ -1391,13 +1664,13 @@ footer {
                 }
 
                 & .container {
-                    
-                        padding: 2rem 12px;
-                    }
+
+                    padding: 2rem 12px;
                 }
             }
+        }
 
-        
+
 
 
 
@@ -1492,9 +1765,9 @@ footer {
     }
 
     section.full-width-content--left img.img-left {
-    height: 100%;
-    width: auto;
-}
+        height: 100%;
+        width: auto;
+    }
 
 
 

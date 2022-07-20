@@ -10,7 +10,7 @@
       <div class="col-12 col-md-7">
 
       </div>
-      <div class="col-12 col-md-5 bg" data-aos="fade-left"data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-1" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/monaco.jpg)">
+      <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-1" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/monaco.jpg)">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_1.jpg" alt="" class="kenburns sm">
       </div>
     </div>
@@ -20,9 +20,9 @@
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="content-wrap">
-          <h2 class="xl" data-aos-once="false" data-aos="fade-right"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1">Every</h2>
+          <h2 class="xl" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1">Every</h2>
 
-          <div class="content" data-aos-once="false" data-aos="fade-right"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1" data-aos-delay="500">
+          <div class="content" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1" data-aos-delay="500">
             <p>Every decision you make for your business is important.</p>
 
           </div>
@@ -39,7 +39,7 @@
 
   <div class="container-fluid bg">
     <div class="row">
-      <div class="col-12 col-md-5 bg" data-aos-once="false" data-aos="fade-right"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">
+      <div class="col-12 col-md-5 bg" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_2.jpg" alt="" class="kenburns sm">
 
       </div>
@@ -53,8 +53,8 @@
 
       </div>
       <div class="col-12 col-md-5">
-        <h2 class="xl" data-aos-once="false" data-aos="fade-left"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">Time</h2>
-        <div class="content" data-aos-once="false" data-aos="fade-left"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2" data-aos-delay="500">
+        <h2 class="xl" data-aos-once="false" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">Time</h2>
+        <div class="content" data-aos-once="false" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2" data-aos-delay="500">
           <p>When time is limited, you need marketing
             professionals you can rely on. We make the
             right choices on your behalf.</p>
@@ -71,7 +71,7 @@
       <div class="col-12 col-md-7">
 
       </div>
-      <div class="col-12 col-md-5 bg" data-aos="fade-left"data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-3">
+      <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-3">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_3.jpg" alt="" class="kenburns sm">
 
       </div>
@@ -80,8 +80,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
-        <h2 class="xl" data-aos-once="false" data-aos="fade-right"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3">Ethos</h2>
-        <div class="content" data-aos-once="false" data-aos="fade-right"data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3" data-aos-delay="500">
+        <h2 class="xl" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3">Ethos</h2>
+        <div class="content" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3" data-aos-delay="500">
           <p>Our capabilities span marketing and PR
             communications, brand identity and strategy,
             corporate affiliations and partnerships, advertising,
@@ -139,7 +139,7 @@
   <div class="swiper-wrapper h-100">
 
     <!-- Slides -->
-    <div class="swiper-slide" data-slidename="Slide 2">
+    <div class="swiper-slide" data-slidename="Consultancy">
       <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/main_slider.jpg)"></div>
     </div>
     <div class="swiper-slide" data-slidename="Slide 2">
@@ -456,14 +456,31 @@
   </div>
 </section>
 
+<section class="page-break">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2><span class="sr-hide">Get in touch</span>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 1729 300">
+            <text id="Get_in_touch" data-name="Get in touch" fill="#1f949b" font-size="317" font-family="Evangelina" font-weight="normal">
+              <tspan x="0" y="272">Get in touch</tspan>
+            </text>
+          </svg>
+        </h2>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact full" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact.jpg)">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-md-6">
         <h3 class="jumbo blue">Con<span>tact</span></h3>
 
       </div>
-      <div class="col-12 col-lg-6 v-center">
+      <div class="col-12 col-md-6 v-center">
         <div class="qr-contact">
           <div class="qr-code">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/qr.jpg" alt="">
@@ -471,9 +488,9 @@
           <div class="contact-details">
             <div class="wrap">
               <p>Roxxane Hughes</p>
-              <p>hello@roxannehughes.com</p>
-              <p>+44 (0) 7713 891 945 </p>
-              <p>www.hughesandco.com</p>
+              <p><a href="mailto:hello@roxannehughes.com">hello@roxannehughes.com</a></p>
+              <p><a href="tel:+44 (0) 7713 891 945">+44 (0) 7713 891 945</a> </p>
+              <p><a href="http://www.hughesandco.com">www.hughesandco.com</a></p>
             </div>
 
           </div>

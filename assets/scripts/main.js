@@ -105,14 +105,20 @@ function openMainAccordContent() {
 }
 
 /* Main Menu */
-var menuActivators = document.querySelectorAll('.menu-activator');
-
+var menuActivators = document.querySelectorAll('div.menu-activator');
+console.log(menuActivators)
 for (let index = 0; index < menuActivators.length; index++) {
   const activator = menuActivators[index];
   activator.addEventListener('click', openMainMenu);
   
 }
 
-function openMainMenu(){
+function openMainMenu(e){
+
+    e.stopPropagation();
+    e.preventDefault();
   document.getElementById('site-menu').classList.toggle('open')
+  this.querySelector('input[type="checkbox"]').checked = !this.querySelector('input[type="checkbox"]').checked;
+  this.classList.toggle('open')
+  console.log('opening')
 }
