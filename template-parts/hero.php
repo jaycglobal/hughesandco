@@ -1,5 +1,5 @@
-<div id="hero" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)">
-  <div class="hero-img" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)"></div>
+<div id="hero">
+  <div class="hero-img kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero.jpg)"></div>
 
   <div class="container">
     <div class="row">
@@ -7,8 +7,9 @@
         <div class="hero-content">
           <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/svg/logo.svg'); ?>
 
-          <p class="hero-excerpt" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="250" data-aos-anchor="#hero">Hughes & Co offer full-scope PR communications
-            & marketing services across the superyacht sector. </p>
+          <p class="hero-excerpt" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-delay="250" data-aos-anchor="#hero">
+          Hughes & Co offer full-scope PR communications and marketing services across the superyacht sector. 
+          </p>
         </div>
       </div>
     </div>
@@ -34,129 +35,163 @@
 
 
 <script>
-  const el = document.querySelector("#hero");
-  const box = getBoundingBox(el)
-  var totalDistance = 0;
-  var oldCursorX, oldCursorY;
 
-  el.addEventListener("mousemove", function(e) {
-
-    var cursorThreshold = 1000;
-
-    if (oldCursorX) totalDistance += Math.sqrt(Math.pow(oldCursorY - e.clientY, 2) + Math.pow(oldCursorX - e.clientX, 2));
-    if (totalDistance >= cursorThreshold) {
-      console.log("Mouse moved 100px!");
-      bgMove(e)
-      totalDistance = 0;
-    }
-
-    oldCursorX = e.clientX;
-    oldCursorY = e.clientY;
-
-
-    // bgMove(e)
-  });
-
-  var bgMoving = false;
-
-  function bgMove(e) {
-    const el = document.querySelector("#hero");
-    const elBg = el.querySelector(".hero-img");
-
-
-
-    let rect = el.getBoundingClientRect();
-    let x = e.clientX - rect.left; //x position within the element.
-    let y = e.clientY - rect.top; //y position within the element.
-
-    elBg.style.transform = "translate(" + (mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y) + "%) scale(1)";
-    elBg.style.transformOrigin = Math.abs(x) + "px " + Math.abs(y) + "px";
-
-
-
-    if (!bgMoving) {
-      bgMoving = true;
-
-      setTimeout(function() {
-        elBg.style.transform = "translate(" + (mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y) + "%) scale(1.2)";
-        bgMoving = false;
-
-      }, 2000)
-    }
-
-
-    // elBg.style.backgroundPosition = (mousePosFromCenter(e).x) + "% " + (mousePosFromCenter(e).y)  + "% ";
-
-    // elBg.style.backgroundPositionY = (e.offsetY / 50) + 50 + "%";
+  var mainHero = document.getElementById('hero'),
+  mainHeroScrollOffset = mainHero.offsetHeight / 2
+ 
+  function update_hero_height() {
+    mainHeroScrollOffset = mainHero.offsetHeight / 2;
   }
 
-  function mousePosFromCenter(e) {
-
-    let windowHeight = window.innerHeight
-    let windowWidth = window.innerWidth
-    let xValue = e.x
-    let yValue = e.y
-
-    let mousePosX = (-1 - (xValue / windowWidth) * 2) * 2
-    let mousePosY = (1 - (yValue / windowHeight) * 2) * 2
-
-    return {
-      x: mousePosX,
-      y: mousePosY
-    }
-  };
-
-
-  let inactivityTime = function() {
-    let time;
-    window.onload = resetTimer;
-    document.onmousemove = resetTimer;
-    document.onkeypress = resetTimer;
-
-    function logout() {
-      el.classList.add('moving')
-
-    }
-
-    function resetTimer() {
-      el.classList.remove('moving')
-
-      clearTimeout(time);
-      time = setTimeout(logout, 2000)
-    }
-  };
-
-  inactivityTime();
-
-
-  function throttle(callback, limit) {
-    var wait = false; // Initially, we're not waiting
-    return function() { // We return a throttled function
-      if (!wait) { // If we're not waiting
-        callback.call(); // Execute users function
-        wait = true; // Prevent future invocations
-        setTimeout(function() { // After a period of time
-          wait = false; // And allow future invocations
-        }, limit);
-      }
+  function activate_hero(){
+    if (window.pageYOffset < mainHeroScrollOffset) {
+     mainHero.classList.add('page-top');
+    } else {
+     mainHero.classList.remove('page-top');
     }
   }
 
-  function getBoundingBox(element) {
-    const box = element.getBoundingClientRect()
-    const ret = {}
+document.addEventListener('DOMContentLoaded', activate_hero);
+window.addEventListener('scroll', activate_hero);
+window.addEventListener('resize', throttle(update_hero_height, 1000))
 
-    // Loops through all DomRect properties.
-    // Cannot spread because they're not enumerable.
-    for (const prop in box) {
-      ret[prop] = box[prop]
+
+function throttle(fn, wait) {
+  var time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
     }
-
-    ret.xCenter = (box.left + box.right) / 2
-    ret.yCenter = (box.top + box.bottom) / 2
-
-    return ret
   }
+}
+
+
+
+
+  // const el = document.querySelector("#hero");
+  // const box = getBoundingBox(el)
+  // var totalDistance = 0;
+  // var oldCursorX, oldCursorY;
+
+  // el.addEventListener("mousemove", function(e) {
+
+  //   var cursorThreshold = 1000;
+
+  //   if (oldCursorX) totalDistance += Math.sqrt(Math.pow(oldCursorY - e.clientY, 2) + Math.pow(oldCursorX - e.clientX, 2));
+  //   if (totalDistance >= cursorThreshold) {
+  //     console.log("Mouse moved 100px!");
+  //     bgMove(e)
+  //     totalDistance = 0;
+  //   }
+
+  //   oldCursorX = e.clientX;
+  //   oldCursorY = e.clientY;
+
+
+  //   // bgMove(e)
+  // });
+
+  // var bgMoving = false;
+
+  // function bgMove(e) {
+  //   const el = document.querySelector("#hero");
+  //   const elBg = el.querySelector(".hero-img");
+
+
+
+  //   let rect = el.getBoundingClientRect();
+  //   let x = e.clientX - rect.left; //x position within the element.
+  //   let y = e.clientY - rect.top; //y position within the element.
+
+  //   elBg.style.transform = "translate(" + (mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y) + "%) scale(1)";
+  //   elBg.style.transformOrigin = Math.abs(x) + "px " + Math.abs(y) + "px";
+
+
+
+  //   if (!bgMoving) {
+  //     bgMoving = true;
+
+  //     setTimeout(function() {
+  //       elBg.style.transform = "translate(" + (mousePosFromCenter(e).x) + "%, " + (mousePosFromCenter(e).y) + "%) scale(1.2)";
+  //       bgMoving = false;
+
+  //     }, 2000)
+  //   }
+
+
+  //   // elBg.style.backgroundPosition = (mousePosFromCenter(e).x) + "% " + (mousePosFromCenter(e).y)  + "% ";
+
+  //   // elBg.style.backgroundPositionY = (e.offsetY / 50) + 50 + "%";
+  // }
+
+  // function mousePosFromCenter(e) {
+
+  //   let windowHeight = window.innerHeight
+  //   let windowWidth = window.innerWidth
+  //   let xValue = e.x
+  //   let yValue = e.y
+
+  //   let mousePosX = (-1 - (xValue / windowWidth) * 2) * 2
+  //   let mousePosY = (1 - (yValue / windowHeight) * 2) * 2
+
+  //   return {
+  //     x: mousePosX,
+  //     y: mousePosY
+  //   }
+  // };
+
+
+  // let inactivityTime = function() {
+  //   let time;
+  //   window.onload = resetTimer;
+  //   document.onmousemove = resetTimer;
+  //   document.onkeypress = resetTimer;
+
+  //   function logout() {
+  //     el.classList.add('moving')
+
+  //   }
+
+  //   function resetTimer() {
+  //     el.classList.remove('moving')
+
+  //     clearTimeout(time);
+  //     time = setTimeout(logout, 2000)
+  //   }
+  // };
+
+  // inactivityTime();
+
+
+  // function throttle(callback, limit) {
+  //   var wait = false; // Initially, we're not waiting
+  //   return function() { // We return a throttled function
+  //     if (!wait) { // If we're not waiting
+  //       callback.call(); // Execute users function
+  //       wait = true; // Prevent future invocations
+  //       setTimeout(function() { // After a period of time
+  //         wait = false; // And allow future invocations
+  //       }, limit);
+  //     }
+  //   }
+  // }
+
+  // function getBoundingBox(element) {
+  //   const box = element.getBoundingClientRect()
+  //   const ret = {}
+
+  //   // Loops through all DomRect properties.
+  //   // Cannot spread because they're not enumerable.
+  //   for (const prop in box) {
+  //     ret[prop] = box[prop]
+  //   }
+
+  //   ret.xCenter = (box.left + box.right) / 2
+  //   ret.yCenter = (box.top + box.bottom) / 2
+
+  //   return ret
+  // }
 
 
   // el.addEventListener("mousemove", (e) => {

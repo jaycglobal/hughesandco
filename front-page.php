@@ -10,9 +10,8 @@
       <div class="col-12 col-md-7">
 
       </div>
-      <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-1" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/monaco.jpg)">
-
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_1.jpg" alt="" class="kenburns sm">
+      <div class="col-12 col-md-5 bg anim-image" data-aos="fade-left"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-1" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/right-1.jpg)">
+        <div class="kenburns sm bg" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/right-1.jpg)"></div>
       </div>
     </div>
   </div>
@@ -21,9 +20,9 @@
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="content-wrap">
-          <h2 class="xl" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1">Every</h2>
+          <h2 class="xl" data-aos-once="false" data-aos="fade-right"   data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1">Every</h2>
 
-          <div class="content" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1" data-aos-delay="500">
+          <div class="content" data-aos-once="false" data-aos="fade-right"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-1" data-aos-delay="1000">
             <p>Every decision you make for your business is important.</p>
 
           </div>
@@ -40,8 +39,8 @@
 
   <div class="container-fluid bg">
     <div class="row">
-      <div class="col-12 col-md-5 bg" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_2.jpg" alt="" class="kenburns sm">
+      <div class="col-12 col-md-5 bg anim-image" data-aos-once="false" data-aos="fade-right"  data-aos-duration="1000"  data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">
+      <div class="kenburns sm bg" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/left-2.jpg)"></div>
 
       </div>
       <div class="col-12 col-md-7">
@@ -54,8 +53,8 @@
 
       </div>
       <div class="col-12 col-md-6">
-        <h2 class="xl" data-aos-once="false" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">Time</h2>
-        <div class="content" data-aos-once="false" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2" data-aos-delay="500">
+        <h2 class="xl" data-aos-once="false" data-aos="fade-left"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2">Time</h2>
+        <div class="content" data-aos-once="false" data-aos="fade-left"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-2" data-aos-delay="1000">
           <p>When time is limited, you need marketing
             professionals you can rely on. We make the
             right choices on your behalf.</p>
@@ -72,8 +71,8 @@
       <div class="col-12 col-md-7">
 
       </div>
-      <div class="col-12 col-md-5 bg" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-3">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_3.jpg" alt="" class="kenburns sm">
+      <div class="col-12 col-md-5 bg anim-image" data-aos="fade-left"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos-once="false" data-aos-anchor="#section-3">
+      <div class="kenburns sm bg" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/right-3.jpg)"></div>
 
       </div>
     </div>
@@ -81,8 +80,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
-        <h2 class="xl" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3">Ethos</h2>
-        <div class="content" data-aos-once="false" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3" data-aos-delay="500">
+        <h2 class="xl" data-aos-once="false" data-aos="fade-right"  data-aos-duration="1000"  data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3">Ethos</h2>
+        <div class="content" data-aos-once="false" data-aos="fade-right"  data-aos-duration="1000"  data-aos-anchor-placement="center-bottom" data-aos-anchor="#section-3" data-aos-delay="1000">
           <p>Our capabilities span marketing and PR
             communications, brand identity and strategy,
             corporate affiliations and partnerships, advertising,
@@ -99,14 +98,15 @@
 </section>
 
 
+
 <section class="dark full-width-content--left lg" id="section-4">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-xl-4  order-2 order-xl-1 bg bg-lg aos-init aos-animate" data-aos="fade-right" data-aos-once="false" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_4.jpg" alt="" class="img-left kenburns">
+      <div class="col-12 col-lg-4 order-2 order-lg-1 bg bg-lg aos-init aos-animate anim-image" data-aos="fade-right"  data-aos-duration="1000"  data-aos-once="false" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4">
+        <div class="kenburns sm bg" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/section_4.jpg)"></div>
 
       </div>
-      <div class="col-12 col-xl-4  order-1 order-xl-2 content aos-init aos-animate" data-aos-once="false" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="500">
+      <div class="col-12 col-lg-4 order-1 order-lg-2 content aos-init aos-animate" data-aos-once="false"  data-aos-duration="1000" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="500">
 <div class="wrap">
   
           <p><strong>Knowledge is power.</strong><br /> Our experience working with superyacht owners, designers, shipyards, charter and brokerage companies, and the wider supply chain gives us an in-depth understanding of the industry and the integral part each company plays. </p>
@@ -114,7 +114,7 @@
           <p><strong>Leading with confidence,</strong><br /> we help you to navigate the myriad of marketing options available and guide you in making informed, effective decisions. We turn your objectives into impactful, engaging and fundamentally successful campaigns, helping you reach the desired audience with efficiency.</p>
 </div>
       </div>
-      <div class="col-12 col-xl-4  order-3 order-xl-3 content aos-init aos-animate" data-aos-once="false" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="700">
+      <div class="col-12 col-lg-4 order-3 order-lg-3 content aos-init aos-animatee" data-aos-once="false"  data-aos-duration="1000" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="700">
         <p>
           We naturally become advocates for the companies we work with and become a valued part of the team. We operate a non-conflict policy to ensure your best interests remain our priority, allowing us to drive your brand both communicatively and commercially.</p>
         <p>When you contract Hughes & Co for your on-going marketing requirements or to manage a one-off project, you benefit from an incredible level of industry expertise. Our insightful approach to business, driven work ethic, and professionalism is appreciated by clients, trusted and relied upon
@@ -254,228 +254,22 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4 accord"  data-accord="<?php echo sanitize_title_with_dashes('Marketing & PR Communications'); ?>">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Marketing & PR Communications</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-          <div class="accord-content">
-            <div class="wrap">
-              <p>A carefully planned and strategically implemented PR and marketing communications strategy is one of the greatest investments a company can make. With marketing actions happening in cohesion across all outlets, your PR and marketing activity is optimised, giving you the widest reach, most impressive impact, and greatest potential for success. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord"  data-accord="<?php echo sanitize_title_with_dashes('Consultancy'); ?>">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Consultancy</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Copywriting</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
 
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord"  data-accord="<?php echo sanitize_title_with_dashes('Charter & Sales Marketing'); ?>">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Charter & Sales Marketing</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Editorial Acquisition</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Events</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Branding</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Websites</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Printed Publications</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Social Media</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Advertising</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 accord">
-        <div class="accord-wrap h-100">
-          <p class="accord-title">Industry Partnerships</p>
-          <svg class="accord-activate" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50">
-            <g id="Group_129" data-name="Group 129" transform="translate(-1115 -5884)">
-              <rect id="Rectangle_129" class="vertical" data-name="Rectangle 129" width="5" height="50" rx="2.5" transform="translate(1138 5884)" fill="#fff" />
-              <rect id="Rectangle_133" class="horizontal" data-name="Rectangle 133" width="5" height="51" rx="2.5" transform="translate(1115 5912) rotate(-90)" fill="#fff" />
-            </g>
-          </svg>
-
-          <div class="accord-content">
-            <div class="wrap">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas, veniam neque facilis quaerat nemo sint earum animi quo rem hic quod ipsam nesciunt dolorem consectetur omnis eaque praesentium odio.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php 
+      $servicesQuery = hughesco_get_services();
+      if ($servicesQuery->have_posts()) {
+        while ($servicesQuery->have_posts()) {
+          $servicesQuery->the_post();
+          get_template_part('template-parts/services/block');
+        }
+        wp_reset_postdata();
+      }
+      ?>
     </div>
   </div>
 </section>
 
-<section class="page-break">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2><span class="sr-hide">Get in touch</span>
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 1729 300">
-            <text id="Get_in_touch" data-name="Get in touch" fill="#1f949b" font-size="317" font-family="Evangelina" font-weight="normal">
-              <tspan x="0" y="272">Get in touch</tspan>
-            </text>
-          </svg>
-        </h2>
 
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="contact full" id="contact-section" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/contact.jpg)">
   <div class="container">
@@ -484,14 +278,14 @@
         <h3 class="jumbo blue">Con<span>tact</span></h3>
 
       </div>
-      <div class="col-12 col-md-6 v-center">
+      <div class="col-12 col-md-6 v-center qr-block">
         <div class="qr-contact">
           <div class="qr-code">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/qr.jpg" alt="">
           </div>
           <div class="contact-details">
             <div class="wrap">
-              <p>Roxxane Hughes</p>
+              <p>Roxanne Hughes</p>
               <p><a href="mailto:hello@roxannehughes.com">hello@roxannehughes.com</a></p>
               <p><a href="tel:+44 (0) 7713 891 945">+44 (0) 7713 891 945</a> </p>
               <p><a href="http://www.hughesandco.com">www.hughesandco.com</a></p>

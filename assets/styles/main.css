@@ -7,15 +7,15 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Gotham Book", sans-serif;
-  src: url("../fonts/Gotham Book Regular 2/Gotham Book Regular.otf") format("otf");
+  font-family: "Gotham Book";
+  src: url("../fonts/GothamBookRegular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gotham Bold", sans-serif;
-  src: url("../fonts/Gotham Bold/Gotham Bold.otf") format("otf");
-  font-weight: bold;
+  font-family: "Gotham Book";
+  src: url("../fonts/Gotham Light Regular.otf") format("opentype");
+  font-weight: lighter;
   font-style: normal;
 }
 /* Before your custom variables file, import Bootstrap functions */
@@ -84,9 +84,9 @@ html {
     max-width: 960px;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .container {
-    max-width: 1400px;
+    max-width: 1480px;
   }
 }
 
@@ -113,9 +113,9 @@ html {
     max-width: 960px;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1400px;
+    max-width: 1480px;
   }
 }
 .row {
@@ -1422,7 +1422,7 @@ html {
     margin-left: 91.6666666667%;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .col-xl {
     -webkit-flex-basis: 0;
     -ms-flex-preferred-size: 0;
@@ -1884,7 +1884,7 @@ html {
     display: inline-flex !important;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .d-xl-none {
     display: none !important;
   }
@@ -2838,7 +2838,7 @@ html {
     align-self: stretch !important;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -4514,7 +4514,7 @@ html {
     margin-left: auto !important;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .m-xl-0 {
     margin: 0 !important;
   }
@@ -4926,7 +4926,7 @@ html {
     text-align: center !important;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .text-xl-left {
     text-align: left !important;
   }
@@ -5351,7 +5351,7 @@ a.text-dark:hover, a.text-dark:focus {
     display: inline-flex !important;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .d-xl-none {
     display: none !important;
   }
@@ -6305,7 +6305,7 @@ a.text-dark:hover, a.text-dark:focus {
     align-self: stretch !important;
   }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1520px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -6589,18 +6589,40 @@ img {
   transition: 0.2s transform ease, 0.2s -webkit-transform ease, 0.2s -moz-transform ease, 0.2s -o-transform ease;
 }
 
-.aos-animate .kenburns {
-  -webkit-transition: 20s -webkit-transform ease;
-  transition: 20s -webkit-transform ease;
-  -o-transition: 20s -o-transform ease;
-  -moz-transition: 20s transform ease, 20s -moz-transform ease;
-  transition: 20s transform ease;
-  transition: 20s transform ease, 20s -webkit-transform ease, 20s -moz-transform ease, 20s -o-transform ease;
+.hero-img {
+  -webkit-transition: 3s -webkit-transform ease, 3s -webkit-transform-origin ease;
+  transition: 3s -webkit-transform ease, 3s -webkit-transform-origin ease;
+  -o-transition: 3s -o-transform ease, 3s -o-transform-origin ease;
+  -moz-transition: 3s transform ease, 3s transform-origin ease, 3s -moz-transform ease, 3s -moz-transform-origin ease;
+  transition: 3s transform ease, 3s transform-origin ease;
+  transition: 3s transform ease, 3s transform-origin ease, 3s -webkit-transform ease, 3s -moz-transform ease, 3s -o-transform ease, 3s -webkit-transform-origin ease, 3s -moz-transform-origin ease, 3s -ms-transform-origin ease, 3s -o-transform-origin ease;
+}
+
+.aos-animate .kenburns, .page-top .kenburns {
+  -webkit-transition: 35s -webkit-transform ease;
+  transition: 35s -webkit-transform ease;
+  -o-transition: 35s -o-transform ease;
+  -moz-transition: 35s transform ease, 35s -moz-transform ease;
+  transition: 35s transform ease;
+  transition: 35s transform ease, 35s -webkit-transform ease, 35s -moz-transform ease, 35s -o-transform ease;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+.anim-image > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .sr-hide {
@@ -6611,11 +6633,15 @@ img {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px, 1px, 1px, 1px);
+  /*maybe deprecated but we need to support legacy browsers */
   -webkit-clip-path: inset(50%);
-  clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
-  white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  clip-path: inset(50%);
+  /*modern browsers, clip-path works inwards from each corner*/
+  white-space: nowrap;
+  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
 body.open-menu div#hero .container {
@@ -6775,7 +6801,7 @@ div#site-menu .wrap .services-menu ul {
   list-style: none;
 }
 div#site-menu .wrap .services-menu ul li {
-  margin-top: 5em;
+  margin-top: 2.5em;
 }
 div#site-menu .wrap .services-menu ul li a {
   font-size: 3em;
@@ -6830,12 +6856,12 @@ body.open-menu div#hero .container {
   color: #fff;
 }
 #hero .hero-img {
-  width: 120%;
+  width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 120%;
+  height: 100%;
   margin: auto;
   position: absolute;
   top: 0;
@@ -6843,30 +6869,15 @@ body.open-menu div#hero .container {
   bottom: 0;
   right: 0;
   background-position: 50% 50%;
-  -webkit-transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
-  transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
-  -o-transition: 8s -o-transform ease, 8s -o-transform-origin ease;
-  -moz-transition: 8s transform ease, 8s transform-origin ease, 8s -moz-transform ease, 8s -moz-transform-origin ease;
-  transition: 8s transform ease, 8s transform-origin ease;
-  transition: 8s transform ease, 8s transform-origin ease, 8s -webkit-transform ease, 8s -moz-transform ease, 8s -o-transform ease, 8s -webkit-transform-origin ease, 8s -moz-transform-origin ease, 8s -ms-transform-origin ease, 8s -o-transform-origin ease;
-}
-#hero.moving .hero-img {
-  -webkit-transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
-  transition: 8s -webkit-transform ease, 8s -webkit-transform-origin ease;
-  -o-transition: 8s -o-transform ease, 8s -o-transform-origin ease;
-  -moz-transition: 8s transform ease, 8s transform-origin ease, 8s -moz-transform ease, 8s -moz-transform-origin ease;
-  transition: 8s transform ease, 8s transform-origin ease;
-  transition: 8s transform ease, 8s transform-origin ease, 8s -webkit-transform ease, 8s -moz-transform ease, 8s -o-transform ease, 8s -webkit-transform-origin ease, 8s -moz-transform-origin ease, 8s -ms-transform-origin ease, 8s -o-transform-origin ease;
 }
 #hero > .container {
-  top: 50%;
+  top: 40%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   position: relative;
-  min-height: 650px;
   -webkit-transition: 0.3s opacity ease;
   -o-transition: 0.3s opacity ease;
   -moz-transition: 0.3s opacity ease;
@@ -6914,7 +6925,7 @@ body.open-menu div#hero .container {
 }
 
 section {
-  min-height: 550px;
+  min-height: 450px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6969,6 +6980,7 @@ section.full .content-bottom {
 }
 section.full .content-img {
   text-align: center;
+  padding: 0px 6rem;
 }
 section.full .content-img img {
   max-width: 100%;
@@ -7052,7 +7064,7 @@ section.half {
 section h2.xl {
   position: absolute;
   font-size: 31.7em;
-  color: rgba(57, 57, 57, 0.5);
+  color: #393939;
   margin: 0px;
   padding: 0px;
   left: 0px;
@@ -7065,6 +7077,7 @@ section h2.xl {
   z-index: 0;
   line-height: 100%;
   bottom: 0px;
+  font-weight: 200;
 }
 section p {
   position: relative;
@@ -7094,11 +7107,17 @@ section.split-content--left .content, section.split-content--right .content {
   position: absolute;
   bottom: 7.5em;
 }
+@media screen and (max-width: 768px) {
+  section.split-content--left .content, section.split-content--right .content {
+    position: relative;
+    bottom: 0;
+  }
+}
 section.split-content--left .content p, section.split-content--right .content p {
   font-size: 2.2em;
 }
 section.full-width-content--left .content {
-  padding: 0rem 10rem;
+  padding: 0rem 5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -7125,7 +7144,7 @@ section.full-width-content--left .content {
 section.full-width-content--left img.img-left {
   float: none;
   min-height: 100%;
-  max-height: 600px;
+  max-height: 650px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -7136,7 +7155,7 @@ section.full-width-content--left .bg {
   overflow: hidden;
 }
 section.full-width-content--left .bg-lg {
-  min-height: 500px;
+  min-height: 700px;
 }
 section.page-break {
   min-height: unset;
@@ -7150,6 +7169,9 @@ section.page-break svg {
 }
 section.contact h3.jumbo {
   text-align: left;
+}
+section#about-section h3.jumbo {
+  color: #393939;
 }
 
 .swiper-slide {
@@ -7211,12 +7233,12 @@ section.contact h3.jumbo {
   transform: none;
 }
 .swiper .swiper-slide-active img.bg {
-  -webkit-transition: 20s -webkit-transform ease;
-  transition: 20s -webkit-transform ease;
-  -o-transition: 20s -o-transform ease;
-  -moz-transition: 20s transform ease, 20s -moz-transform ease;
-  transition: 20s transform ease;
-  transition: 20s transform ease, 20s -webkit-transform ease, 20s -moz-transform ease, 20s -o-transform ease;
+  -webkit-transition: 35s -webkit-transform ease;
+  transition: 35s -webkit-transform ease;
+  -o-transition: 35s -o-transform ease;
+  -moz-transition: 35s transform ease, 35s -moz-transform ease;
+  transition: 35s transform ease;
+  transition: 35s transform ease, 35s -webkit-transform ease, 35s -moz-transform ease, 35s -o-transform ease;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -7241,12 +7263,12 @@ section.contact h3.jumbo {
   overflow: hidden;
 }
 .swiper .swiper-slide-active .kenburns {
-  -webkit-transition: 20s -webkit-transform ease;
-  transition: 20s -webkit-transform ease;
-  -o-transition: 20s -o-transform ease;
-  -moz-transition: 20s transform ease, 20s -moz-transform ease;
-  transition: 20s transform ease;
-  transition: 20s transform ease, 20s -webkit-transform ease, 20s -moz-transform ease, 20s -o-transform ease;
+  -webkit-transition: 35s -webkit-transform ease;
+  transition: 35s -webkit-transform ease;
+  -o-transition: 35s -o-transform ease;
+  -moz-transition: 35s transform ease, 35s -moz-transform ease;
+  transition: 35s transform ease;
+  transition: 35s transform ease, 35s -webkit-transform ease, 35s -moz-transform ease, 35s -o-transform ease;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -7286,6 +7308,9 @@ section.contact h3.jumbo {
   margin: auto;
   width: 100%;
 }
+.swiper .slider-menu div#slide-name p a {
+  font-size: 2.2rem;
+}
 .swiper .swiper-pagination-bullet {
   width: 100px;
   -webkit-border-radius: 0px;
@@ -7314,8 +7339,9 @@ section.contact h3.jumbo {
   -o-transition: 1.5s opacity ease;
   -moz-transition: 1.5s opacity ease;
   transition: 1.5s opacity ease;
-  margin-bottom: 2.4rem;
+  margin-bottom: 0.5rem;
   min-height: 120px;
+  padding: 0rem 0.25rem;
   /* Main Accordion */
 }
 .accordion .accord .accord-wrap {
@@ -7504,6 +7530,10 @@ section.contact h3.jumbo {
   transition: 0.3s color ease-in-out, 0.3s fill ease-in-out;
 }
 
+.qr-block {
+  padding: 0rem 7.5rem;
+}
+
 .qr-contact {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7554,7 +7584,7 @@ footer p {
   margin: 0;
 }
 footer p.footer-title {
-  margin-bottom: 5.8rem;
+  margin-bottom: 1rem;
 }
 footer ul {
   list-style: none;
@@ -7562,7 +7592,7 @@ footer ul {
   padding: 0px;
 }
 footer ul li {
-  margin-bottom: 6rem;
+  margin-bottom: 0.7rem;
 }
 footer ul li a {
   color: #fff;
@@ -7570,7 +7600,7 @@ footer ul li a {
   font-family: "Gotham Book", sans-serif;
 }
 footer .contact-info {
-  margin-bottom: 5.8rem;
+  margin-bottom: 1rem;
 }
 footer .contact-social a.social-link {
   margin-right: 3.5rem;
@@ -7630,7 +7660,7 @@ footer .footer-form .wrap input[type=submit] {
   margin-top: 2.5rem;
 }
 footer .under-footer {
-  border-top: 3px solid #1BACB5;
+  border-top: 2px solid #1BACB5;
   margin-top: 9rem;
   padding-top: 3rem;
   font-size: 1rem;
@@ -7640,7 +7670,7 @@ footer .under-footer p {
 }
 footer .under-footer p.copyright-excerpt, footer .under-footer p a {
   margin-top: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 /**
@@ -7773,7 +7803,7 @@ svg.social-bubble:hover .svg-elem-5 {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1520px) {
   p,
 a,
 input {
@@ -7787,9 +7817,6 @@ input {
   }
   section.lg {
     min-height: unset;
-  }
-  section.split-content--left, section.split-content--right {
-    font-size: 0.6rem;
   }
   section.full-width-content--left img.img-left {
     max-height: unset;
@@ -7811,8 +7838,36 @@ input {
   .swiper .swiper-pagination-bullet {
     width: 5%;
   }
-  footer ul li {
+  section.full-width-content--left .content {
+    padding: 0em 12px 3em 12px;
+  }
+  section.full-width-content--left .content ~ .content {
+    padding: 3em 12px 0em 12px;
+  }
+  .qr-contact > div.contact-details .wrap {
+    padding-left: 0rem;
+  }
+  footer ul {
     margin-bottom: 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-height: 400px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   footer .footer-content > div {
     margin-bottom: 3rem;
@@ -7822,19 +7877,6 @@ input {
   }
   footer .site-logo {
     top: 0;
-  }
-  section.full-width-content--left .content {
-    padding: 0em 12px 3em 12px;
-  }
-  section.full-width-content--left .content ~ .content {
-    padding: 3em 12px 0em 12px;
-  }
-  section.full-width-content--left .bg {
-    height: 450px;
-    overflow: hidden;
-  }
-  .qr-contact > div.contact-details .wrap {
-    padding-left: 0rem;
   }
 }
 @media screen and (max-width: 992px) {
@@ -8034,6 +8076,24 @@ input {
   #menu-activator {
     left: 1rem;
     top: 3rem;
+  }
+  #menu-activator .line {
+    width: 60%;
+    height: 5px;
+    position: absolute;
+  }
+  #menu-activator .line.line-2 {
+    top: 30%;
+  }
+  #menu-activator .line.line-3 {
+    top: 60%;
+  }
+  #menu-activator input[type=checkbox]:checked ~ .line-1 {
+    -webkit-transform: translateY(5px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(5px) translateX(0) rotate(45deg);
+    -ms-transform: translateY(5px) translateX(0) rotate(45deg);
+    -o-transform: translateY(5px) translateX(0) rotate(45deg);
+    transform: translateY(5px) translateX(0) rotate(45deg);
   }
 }
 @media screen and (max-height: 1000px) {

@@ -9,7 +9,7 @@
 $gridSM: 576px;
 $gridMD: 768px;
 $gridLG: 992px;
-$gridXL: 1430px;
+$gridXL: 1520px;
 
 $grid-breakpoints: (
   xs: 0,
@@ -31,7 +31,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1400px
+  xl: 1480px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");

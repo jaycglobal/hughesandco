@@ -22,10 +22,7 @@
           </g>
         </svg>
         <p>
-          Hughes & Co offer
-          full-scope PR communications
-          & marketing services across the
-          superyacht sector.
+        Hughes & Co offer full-scope PR communications and marketing services across the superyacht sector. 
         </p>
       </div>
       <div class="footer-menu offset-xl-1 col-12 col-md-6 col-xl-2">
@@ -45,17 +42,15 @@
       <div class="col-12 col-md-6 col-xl-3">
         <div class="footer-contact">
           <div class="contact-info">
-            <p class="footer-title">Contact:</p>
 
             <p>
-              <a href="mailto:hello@roxannehughes.com">hello@roxannehughes.com</a>
+              <a href="mailto:www.roxannehughes.com">www.roxannehughes.com</a>
             </p>
             <p><a href="tel:+44 (0) 7713 891 945">+44 (0) 7713 891 945</a> </p>
 
           </div>
 
           <div class="contact-social">
-            <p class="footer-title">Follow us on social media:</p>
             <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/svg/fb.svg'); ?>
 
 

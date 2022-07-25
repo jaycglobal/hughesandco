@@ -39,6 +39,19 @@
               <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes('Branding'); ?>">Branding</a></li>
               <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes('Social Media'); ?>">Social Media</a></li>
 
+              <?php 
+              $servicesQuery = hughesco_get_services();
+              if ($servicesQuery->have_posts()) {
+                while ($servicesQuery->have_posts()) {
+                  $servicesQuery->the_post();
+                  ?>
+                    <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes(get_the_title()); ?>"><?php the_title(); ?></a></li>
+                  <?php
+                }
+                wp_reset_postdata();
+              }
+              ?>
+
 
 
           </div>

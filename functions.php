@@ -1,5 +1,7 @@
 <?php 
 
+include_once('includes/theme/cpt.php');
+
 
 function hughesco_enqueue_theme_assets() {
 
@@ -51,6 +53,7 @@ function hughesco_enqueue_pre_load_fonts() {
 
 // Add title tag
 add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
 
 
 // Remove Emojis
@@ -64,3 +67,13 @@ remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
 // Remove WP Version number (Security reasons)
 remove_action('wp_head', 'wp_generator');
+
+
+function hughesco_get_services(){
+    $servicesQuery = new WP_Query(array(
+        'post_type'       => 'service',
+        'posts_per_page'  => 12
+      )); 
+
+   return $servicesQuery;
+}
