@@ -7298,14 +7298,18 @@ section#about-section h3.jumbo {
   -ms-flex-align: center;
   align-items: center;
   width: 60%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .swiper .slider-menu .wrapper {
   background: rgba(0, 0, 0, 0.5);
-  padding: 5em 0em;
+  padding: 2em 0;
   color: #fff;
-  max-width: 100%;
+  max-width: 50%;
   text-align: center;
-  margin: auto;
   width: 100%;
 }
 .swiper .slider-menu div#slide-name p a {
@@ -7326,6 +7330,7 @@ section#about-section h3.jumbo {
   background: #1BACB5;
 }
 .swiper span.swiper-pagination-bullet {
+  height: 5px;
   background: #fff;
   opacity: 1;
 }

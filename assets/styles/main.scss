@@ -820,15 +820,15 @@ section {
     display: flex;
     align-items: center;
     width: 60%;
+    justify-content: center;
 
     & .wrapper {
-      background: rgb(0 0 0 / 50%);
-      padding: 5em 0em;
-      color: #fff;
-      max-width: 100%;
-      text-align: center;
-      margin: auto;
-      width: 100%;
+        background: rgba(0,0,0,.5);
+        padding: 2em 0;
+        color: #fff;
+        max-width: 50%;
+        text-align: center;
+        width: 100%;
     }
 
 
@@ -862,6 +862,7 @@ section {
   }
 
   & span.swiper-pagination-bullet {
+    height: 5px;
     background: #fff;
     opacity: 1;
   }
