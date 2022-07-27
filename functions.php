@@ -72,7 +72,8 @@ remove_action('wp_head', 'wp_generator');
 function hughesco_get_services(){
     $servicesQuery = new WP_Query(array(
         'post_type'       => 'service',
-        'posts_per_page'  => 12
+        'posts_per_page'  => 12,
+        'order'           => 'ASC'
       )); 
 
    return $servicesQuery;

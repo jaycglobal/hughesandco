@@ -1,4 +1,4 @@
-<div class="col-12 col-md-6 col-lg-4 accord" data-accord="<?php echo sanitize_title_with_dashes(get_the_title()); ?>">
+<div class="col-12 col-md-6 col-lg-4 accord" data-accord="<?php echo sanitize_title_with_dashes(get_the_title()); ?>" id="<?php echo sanitize_title_with_dashes(get_the_title()); ?>">
   <div class="accord-wrap h-100">
 
     <p class="accord-title"><?php the_title(); ?></p>

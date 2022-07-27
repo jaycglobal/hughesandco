@@ -1,7 +1,19 @@
+<a href="#hero" id="scroll-to-page-top" class="gbc-scroll">
+<svg class="next-section-scroll " xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+      <g id="Group_53" data-name="Group 53" transform="translate(-1772 -949)">
+        <g id="Group_51" data-name="Group 51" transform="translate(1837.24 975.932) rotate(90)">
+          <line id="Line_4" data-name="Line 4" x2="26.136" y2="26.136" transform="translate(0 0)" fill="none" stroke="#fff" stroke-width="5"></line>
+          <line id="Line_5" data-name="Line 5" y1="26.136" x2="26.136" transform="translate(0 24.146)" fill="none" stroke="#fff" stroke-width="5"></line>
+        </g>
+    
+      </g>
+    </svg>
+</a>
+
 <footer>
   <div class="container">
     <div class="row footer-content">
-      <div class="col-12 col-lg-6 col-xl-3 footer-logo">
+      <div class="col-12 col-lg-6 col-xl-3 order-1 order-xl-1 footer-logo">
         <svg class="site-logo" data-name="Group 52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="471.401" height="238.975" viewBox="0 0 471.401 238.975">
           <defs>
             <clipPath id="clip-path">
@@ -25,21 +37,9 @@
         Hughes & Co offer full-scope PR communications and marketing services across the superyacht sector. 
         </p>
       </div>
-      <div class="footer-menu offset-xl-1 col-12 col-md-6 col-xl-2">
-        <ul>
-           <li><a href="#hero" class="gbc-scroll">Home</a></li>
-          <li><a href="#about-section" class="gbc-scroll">About</a></li>
-          <li><a href="#services-section" class="gbc-scroll">Services</a></li>
-
-          <li><a href="#">Menu</a></li>
-          <li><a href="#contact-section" class="gbc-scroll">Contact</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-
-          <li><a href="#">Privacy Policy</a></li>
-
-        </ul>
+      <div class="footer-menu col-12 col-md-6 col-xl-2 order-4 order-xl-2">
       </div>
-      <div class="col-12 col-md-6 col-xl-3">
+      <div class="col-12 col-md-6 col-xl-3 order-3 order-xl-3">
         <div class="footer-contact">
           <div class="contact-info">
 
@@ -58,20 +58,25 @@
         </div>
 
       </div>
-      <div class="col-12 col-lg-6 col-xl-3 v-center footer-form">
+      <div class="col-12 col-lg-6 col-xl-4 order-2 order-xl-4 footer-form">
         <div class="wrap">
           <p class="footer-title">Join our network</p>
-          <input type="email" placeholder="Email" name="" id="">
-          <input type="submit" value="Submit">
+          <?php echo do_shortcode('[contact-form-7 id="54" title="Untitled"]'); ?>
         </div>
 
       </div>
     </div>
     <div class="row under-footer">
-      <div class="col-12 ">
+      <div class="col-12 col-xl-6 order-3 order-xl-1">
         <p class="copyright">© Copyright Hughes & Co. 2022. All rights reserved.</p>
       </div>
-      <div class="col-12">
+      <div class="col-6 col-xl-3 text-xl-right order-1 order-xl-2">
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="col-6 col-xl-3 text-xl-right order-2 order-xl-3">
+        <a href="#">Terms and conditions</a>
+      </div>
+      <div class="col-12 col-xl-12 order-4 order-xl-4">
         <p class="copyright-excerpt">Website designed and created by <a href="https://discoverglobal.co.uk" target="_blank">Global</a>.</p>
       </div>
     </div>

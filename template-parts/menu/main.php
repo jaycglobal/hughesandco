@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4">
+        <div class="col-12 col-md-6 col-xl-4">
         <svg class="site-logo" data-name="Group 52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="471.401" height="238.975" viewBox="0 0 471.401 238.975" data-aos="fade-right"  data-aos-duration="1000" data-aos-easing="ease-in-out"  data-aos-anchor="#hero">
               <defs>
                 <clipPath id="clip-path">
@@ -30,22 +30,17 @@
               </ul>
             </div>
         </div>
-        <div class="col-12 offset-xl-1 col-lg-6 col-xl-5">
-          <h4>Services</h4>
+        <div class="col-12 offset-xl-1 col-md-6 col-xl-5">
+          <h4><a href="#services-section" class="gbc-scroll">Services</a></h4>
           <div class="services-menu">
             <ul>
-              <li><a href="#" data-accordlink="<?php echo sanitize_title_with_dashes('Marketing & PR Communications'); ?>">Marketing & PR Communications</a></li>
-              <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes('Charter & Sales Marketing'); ?>">Charter & Sales Marketing</a></li>
-              <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes('Branding'); ?>">Branding</a></li>
-              <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes('Social Media'); ?>">Social Media</a></li>
-
               <?php 
               $servicesQuery = hughesco_get_services();
               if ($servicesQuery->have_posts()) {
                 while ($servicesQuery->have_posts()) {
                   $servicesQuery->the_post();
                   ?>
-                    <li><a href="#"  data-accordlink="<?php echo sanitize_title_with_dashes(get_the_title()); ?>"><?php the_title(); ?></a></li>
+                    <li><a href="#<?php echo sanitize_title_with_dashes(get_the_title()); ?>"  data-accordlink="<?php echo sanitize_title_with_dashes(get_the_title()); ?>"><?php the_title(); ?></a></li>
                   <?php
                 }
                 wp_reset_postdata();

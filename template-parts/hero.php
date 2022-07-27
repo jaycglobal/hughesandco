@@ -46,8 +46,11 @@
   function activate_hero(){
     if (window.pageYOffset < mainHeroScrollOffset) {
      mainHero.classList.add('page-top');
+     document.body.classList.add('page-top');
     } else {
      mainHero.classList.remove('page-top');
+     document.body.classList.remove('page-top');
+
     }
   }
 

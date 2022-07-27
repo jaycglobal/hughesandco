@@ -83,6 +83,11 @@ body {
   margin: 0;
   padding: 0;
   background: #E0E0E0;
+  &.open-menu {
+    @media screen and (max-width: $gridMD) {
+      overflow: hidden;
+    }
+  }
 }
 
 html {
@@ -99,6 +104,10 @@ input {
   font-size: 1.8rem;
   @include bodyFont();
   line-height: 3rem;
+
+  &.sm {
+    font-size: 1.6rem;
+  }
 
   & strong,
   & b {
@@ -174,10 +183,26 @@ img {
   /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 
+.page-top {
+  & a#scroll-to-page-top {
+    opacity: 0;
+  }
+}
+
+a#scroll-to-page-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  transition: 0.3s opacity ease-in-out;
+  opacity: 1;
+  transform: rotate(180deg);
+  z-index: 10;
+}
+
 $background: #3d566e;
 $color: #ecf0f1;
 
-$height-icon: 50px;
+$height-icon: 40px;
 $width-line: 100px;
 $height-line: 8px;
 
@@ -200,7 +225,7 @@ body.open-menu {
   position: relative;
   display: block;
   width: 100px;
-  height: 50px;
+  height: 40px;
   position: absolute;
   display: block;
   top: 7rem;
@@ -225,7 +250,7 @@ body.open-menu {
     left: 0;
     border-radius: ($height-line / 2);
     transition: transform $transition-time ease, opacity $transition-time ease, background-color 0.3s ease 0.4s;
-
+height: 5px;
 
     &.line-1 {
       top: 0;
@@ -285,12 +310,17 @@ div#site-menu {
   z-index: 10;
   opacity: 0;
   transition: 0.3s opacity ease 0.3s;
+  font-size: .8rem;
 
+  @media screen and (max-height: 1000px) {
+    font-size: .5rem;
+  }
   &.open {
     opacity: 1;
     pointer-events: all;
 
     & .wrap {
+  
       & .container {
         & .row {
           &>div {
@@ -334,6 +364,10 @@ div#site-menu {
       & li {
         margin-top: 5em;
 
+        @media screen and (max-width: $gridMD) {
+          margin-top: 3em;
+        }
+
         & a {
           text-decoration: none;
           color: #393939;
@@ -349,14 +383,26 @@ div#site-menu {
         margin: 0px;
 
         & li {
-          border-bottom: 2px solid #0FACB5;
-          margin-top: 5em;
 
           & a {
             font-size: 4.4em;
             text-decoration: none;
             color: #393939;
             @include headingFont();
+          }
+          &:after {
+            content: '';
+            position: relative;
+            width: 100%;
+            background: #0FACB5;
+            height: 2px;
+            display: block;
+            max-width: 250px;
+
+            @media screen and (max-width: $gridLG) {
+              max-width: 190px;
+            }
+
           }
         }
       }
@@ -383,7 +429,6 @@ div#site-menu {
       top: 50%;
       transform: translateY(-50%);
       position: relative;
-      min-height: 650px;
 
       & .row {
         &>div {
@@ -401,9 +446,31 @@ div#site-menu {
       color: #393939;
       @include headingFont();
       margin: 0;
-      border-bottom: 2px solid #0FACB5;
+      border-bottom: 2px solid #0FACB5; 
+      & > a {
+        font-size: inherit;
+      }
 
     }
+  }
+
+  @media screen and (max-width: $gridLG) {
+    font-size: .8rem;
+  }
+
+  @media screen and (max-width: $gridMD) {
+    font-size: 0.6rem;
+  }
+  @media screen and (max-width: $gridSM) {
+    font-size: 0.5rem;
+  }
+
+  @media screen and (max-width: $gridMD) and (max-height: 900px) {
+    font-size: 0.4rem;
+  }
+
+  @media screen and (max-width: $gridMD) and (max-height: 750px) {
+    font-size: 0.3rem;
   }
 }
 
@@ -549,7 +616,13 @@ section {
       & span {
         display: block;
         text-align: right;
-        margin-top: -140px;
+        margin-top: -14rem;
+        @media screen and (max-width: $gridXL) {
+          margin-top: -10rem;
+        }
+        @media screen and (max-width: $gridMD) {
+          display: inline-block;
+        }
       }
     }
   }
@@ -678,11 +751,10 @@ section {
 
   &.full-width-content--left {
     & .content {
-      padding: 0rem 5rem;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
+      padding: 10rem 5rem;
+      @media screen and (max-width: $gridLG) {
+        padding: 3rem 12px;
+      }
 
     }
 
@@ -701,9 +773,9 @@ section {
       overflow: hidden;
     }
 
-    & .bg-lg {
-      min-height: 700px;
-    }
+    // & .bg-lg {
+    //   min-height: 700px;
+    // }
   }
 
   &.page-break {
@@ -730,6 +802,24 @@ section {
         color: #393939;
     }
   }
+
+  &#section-1 {
+    & .container-fluid.bg {
+      padding: 6rem 0rem 3rem 0rem;
+
+    }
+  }
+
+  &#section-4 {
+    padding: 3rem 0rem 6rem 0rem;
+
+    @media screen and (max-width: $gridLG) {
+      padding: 3rem 0rem 3rem 0rem;
+    }
+    & .wrap {
+
+    }
+  }
 }
 
 .swiper-slide {
@@ -744,6 +834,9 @@ section {
     height: 100%;
     background-size: cover;
     background-position: 50% 50%;
+    @media screen and (max-width: $gridXL) {
+      background-position: 50% 70%;
+    }
   }
 
   & img {
@@ -762,6 +855,15 @@ section {
   &.full-screen-slider {
     height: 100vh;
     min-height: 600px;
+    @media screen and (max-width: $gridXL) {
+      height: 450px;
+      min-height: 800px;
+    
+        & .swiper-pagination-bullet {
+          width: 60px;
+        }
+      
+    }
   }
 
   & img.bg {
@@ -821,7 +923,10 @@ section {
     align-items: center;
     width: 60%;
     justify-content: center;
-
+    @media screen and (max-width: $gridXL) {
+      font-size: 1.8rem;
+      width: 60%;
+    }
     & .wrapper {
         background: rgba(0,0,0,.5);
         padding: 2em 0;
@@ -829,6 +934,15 @@ section {
         max-width: 50%;
         text-align: center;
         width: 100%;
+        @media screen and (max-width: $gridXL) {
+          padding: 3em 0em;
+          max-width: 100%;
+          width: 100%;
+        }
+
+        @media screen and (max-width: $gridLG) {
+          padding: 0em;
+        }
     }
 
 
@@ -836,6 +950,9 @@ section {
     &  p {
         & a {
             font-size: 2.2rem;
+            @media screen and (max-width: $gridLG) {
+              font-size: 1.6rem;
+            }
         }
     }
 }
@@ -1045,6 +1162,9 @@ section {
 
 .qr-block {
     padding: 0rem 7.5rem;
+    @media screen and (max-width: $gridMD) {
+      padding: 0rem 12px;
+    }
 }
 
 
@@ -1057,7 +1177,9 @@ section {
 
   &>div {
     flex: 0 0 50%;
-
+    @media screen and (max-width: $gridXL) {
+      flex: 0 0 100%;
+    }
     &.qr-excerpt {
       flex: 0 0 100%;
 
@@ -1067,14 +1189,23 @@ section {
     }
 
     &.contact-details {
+      @media screen and (max-width: $gridXL) {
+          padding: 1rem 0;
+      
+      }
       & .wrap {}
     }
+ 
+
   }
 
   & .qr-code {
     & img {
       padding-bottom: 2.5rem;
       padding-right: 2.5rem;
+        @media screen and (max-width: $gridXL) {
+          padding: 0;
+        }
 
     }
   }
@@ -1101,6 +1232,10 @@ footer {
 
   & p {
     margin: 0;
+
+    @media screen and (max-width: $gridMD) {
+        margin-bottom: 0.5rem;
+    }
 
     &.footer-title {
       margin-bottom: 1rem;
@@ -1132,16 +1267,23 @@ footer {
 
   & .contact-social {
     & a.social-link {
-      margin-right: 3.5rem;
+      margin-right: .5rem;
     }
   }
 
   & .footer-form {
-    justify-content: center;
 
     & .wrap {
       position: relative;
       width: 100%;
+      @media screen and (max-width: $gridXL) {
+        position: relative;
+        width: 100%;
+        top: 234px;
+      }
+      @media screen and (max-width: $gridLG) {
+        top: 0;
+      }
 
       & p.footer-title {
         margin-bottom: 1rem;
@@ -1183,6 +1325,11 @@ footer {
 
     & p {
       margin: 0;
+      &.copyright {
+        @media screen and (max-width: $gridXL) {
+          margin-top: 2rem;
+        }
+      }
 
       &.copyright-excerpt,
       & a {
@@ -1383,40 +1530,19 @@ svg.social-bubble:hover .svg-elem-5 {
     }
   }
 
-  .swiper {
-    &.full-screen-slider {
-      height: 450px;
-      min-height: 600px;
-    }
 
-    & .slider-menu {
-      font-size: 1.8rem;
-      width: 60%;
-
-      & .wrapper {
-        padding: 3em 0em;
-        max-width: 100%;
-        width: 100%;
-      }
-
-    }
-
-    & .swiper-pagination-bullet {
-      width: 5%;
-    }
-  }
 
 
 
   section.full-width-content--left {
-    & .content {
-      padding: 0em 12px 3em 12px;
+    // & .content {
+    //   padding: 0em 12px 3em 12px;
 
-      &~.content {
-        padding: 3em 12px 0em 12px;
+    //   &~.content {
+    //     padding: 3em 12px 0em 12px;
 
-      }
-    }
+    //   }
+    // }
 
     & .bg {
 
@@ -1473,9 +1599,7 @@ svg.social-bubble:hover .svg-elem-5 {
       & h3.jumbo {
         font-size: 18.7rem;
 
-        & span {
-          display: inline-block
-        }
+ 
       }
 
       & .content-img {
@@ -1517,7 +1641,7 @@ svg.social-bubble:hover .svg-elem-5 {
   }
 
   div#site-menu {
-    font-size: .8rem;
+ 
 
     & .wrap {
       & .main-menu {
@@ -1586,14 +1710,16 @@ svg.social-bubble:hover .svg-elem-5 {
 
   .swiper {
     & .swiper-pagination-bullet {
-      width: auto;
       padding: 6px;
       border-radius: 50%;
+      width: 10px!important;
     }
   }
 
   .qr-contact>div.qr-code {
     flex: 0 0 100%;
+ 
+
   }
 
   .split-content--right {
@@ -1659,7 +1785,7 @@ svg.social-bubble:hover .svg-elem-5 {
       flex-wrap: wrap;
       border-top: 2px solid #2eadb4;
       border-bottom: 2px solid #2eadb4;
-      padding-top: 4rem;
+      padding: 4rem 0rem;
 
       & li {
         flex-basis: 50%;
@@ -1668,7 +1794,7 @@ svg.social-bubble:hover .svg-elem-5 {
 
     & .under-footer {
       border-top: 3px solid #1bacb5;
-      margin-top: 3.5rem;
+      margin-top: 0rem;
       padding-top: 3rem;
     }
   }
@@ -1735,6 +1861,7 @@ svg.social-bubble:hover .svg-elem-5 {
   #menu-activator {
     left: 1rem;
     top: 3rem;
+        height: 50px;
     & .line {
         width: 60%;
         height: 5px;
@@ -1751,18 +1878,17 @@ svg.social-bubble:hover .svg-elem-5 {
         &  ~ .line-1 {
             transform: translateY(5px) translateX(0) rotate(45deg);
         }
+
+        & ~ .line-3 {
+          transform: translateY(-25px) translateX(0) rotate(-45deg);
+      }
     }
   }
-
-
-
 
 }
 
 @media screen and (max-height: 1000px) {
-  div#site-menu {
-    font-size: 0.6rem;
-  }
+
 }
 
 @media screen and (max-height: 800px) {

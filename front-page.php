@@ -109,16 +109,18 @@
       <div class="col-12 col-lg-4 order-1 order-lg-2 content aos-init aos-animate" data-aos-once="false"  data-aos-duration="1000" data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="500">
 <div class="wrap">
   
-          <p><strong>Knowledge is power.</strong><br /> Our experience working with superyacht owners, designers, shipyards, charter and brokerage companies, and the wider supply chain gives us an in-depth understanding of the industry and the integral part each company plays. </p>
+          <p><strong>Knowledge is power.</strong> Our experience working with superyacht owners, designers, shipyards, charter and brokerage companies, and the wider supply chain gives us an in-depth understanding of the industry and the integral part each company plays. </p>
           <br />
-          <p><strong>Leading with confidence,</strong><br /> we help you to navigate the myriad of marketing options available and guide you in making informed, effective decisions. We turn your objectives into impactful, engaging and fundamentally successful campaigns, helping you reach the desired audience with efficiency.</p>
+          <p><strong>Leading with confidence,</strong> we help you to navigate the myriad of marketing options available and guide you in making informed, effective decisions. We turn your objectives into impactful, engaging and fundamentally successful campaigns, helping you reach the desired audience with efficiency.</p>
 </div>
       </div>
       <div class="col-12 col-lg-4 order-3 order-lg-3 content aos-init aos-animatee" data-aos-once="false"  data-aos-duration="1000" data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom" data-aos-anchor="#section-4" data-aos-delay="700">
-        <p>
-          We naturally become advocates for the companies we work with and become a valued part of the team. We operate a non-conflict policy to ensure your best interests remain our priority, allowing us to drive your brand both communicatively and commercially.</p>
-        <p>When you contract Hughes & Co for your on-going marketing requirements or to manage a one-off project, you benefit from an incredible level of industry expertise. Our insightful approach to business, driven work ethic, and professionalism is appreciated by clients, trusted and relied upon
-        </p>
+<div class="wrap">
+  <p>
+    <strong>We naturally become advocates</strong> for the companies we work with and become a valued part of the team. We operate a non-conflict policy to ensure your best interests remain our priority, allowing us to drive your brand both communicatively and commercially.</p>
+  <p>When you contract Hughes & Co for your on-going marketing requirements or to manage a one-off project, you benefit from an incredible level of industry expertise. Our insightful approach to business, driven work ethic, and professionalism is appreciated by clients, trusted and relied upon</p>
+</div>
+
       </div>
     </div>
   </div>
@@ -142,44 +144,16 @@
 
   <div class="swiper-wrapper h-100">
 
-    <!-- Slides -->
-    <div class="swiper-slide" data-slidename="Marketing & PR Communications">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/main_slider.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/main_slider.webp)"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Consultancy">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_2.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_2.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Charter & Sales Marketing" >
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_3.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_3.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 4">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_4.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_4.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 5">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_5.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_5.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 6">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_6.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_6.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 7">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_7.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_7.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 8">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_8.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_8.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 9">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_9.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_9.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 10">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_10.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_10.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 11">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_11.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_11.webp);"></div>
-    </div>
-    <div class="swiper-slide" data-slidename="Slide 12">
-      <div class="slide-wrapper bg kenburns" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_12.jpg); background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slide_12.webp);"></div>
-    </div>
-
+    <?php 
+    $servicesQuery = hughesco_get_services();
+    if ($servicesQuery->have_posts()) {
+      while ($servicesQuery->have_posts()) {
+        $servicesQuery->the_post();
+        get_template_part('template-parts/services/slide');
+      }
+      wp_reset_postdata();
+    }
+    ?>
 
 
   </div>
@@ -288,12 +262,12 @@
               <p>Roxanne Hughes</p>
               <p><a href="mailto:hello@roxannehughes.com">hello@roxannehughes.com</a></p>
               <p><a href="tel:+44 (0) 7713 891 945">+44 (0) 7713 891 945</a> </p>
-              <p><a href="http://www.hughesandco.com">www.hughesandco.com</a></p>
+              <p><a href="http://www.roxannehughes.com">www.roxannehughes.com</a></p>
             </div>
 
           </div>
           <div class="qr-excerpt">
-            <p>Add my details into your contacts by scanning the
+            <p class="sm">Add my details into your contacts by scanning the
               above QR code.</p>
           </div>
         </div>
