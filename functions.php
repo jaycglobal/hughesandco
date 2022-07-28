@@ -86,3 +86,24 @@ function hughesco_get_services(){
    return $servicesQuery;
 }
 
+// function test_template_part_hook($slug, $name, $args) {
+//     wp_enqueue_script('this-is-a-test', get_stylesheet_directory_uri() . '/assets/styles/test.css');
+// }
+
+// add_action( 'get_template_part_template-parts/footer/site', 'test_template_part_hook', 10, 3 );
+
+// add_action( 'get_template_part', 'wp_kama_get_template_part_slug_action', 10, 3 );
+
+// /**
+//  * Function for `get_template_part_(slug)` action-hook.
+//  * 
+//  * @param string      $slug The slug name for the generic template.
+//  * @param string|null $name The name of the specialized template.
+//  * @param array       $args Additional arguments passed to the template.
+//  *
+//  * @return void
+//  */
+// function wp_kama_get_template_part_slug_action( $slug, $name, $args ){
+
+// 	echo $slug;
+// }

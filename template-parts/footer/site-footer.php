@@ -1,3 +1,13 @@
+<?php
+function hughesco_enqueue_theme_assets_test() {
+    wp_enqueue_style('hughesco-test', get_stylesheet_directory_uri() . '/assets/styles/test.css');
+
+}
+
+add_action( 'wp_enqueue_scripts', 'hughesco_enqueue_theme_assets_test', 9999 );
+
+?>
+
 <footer>
 	<div class="container">
 		<div class="row footer-content">
