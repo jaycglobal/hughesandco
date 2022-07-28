@@ -1,0 +1,20 @@
+
+<svg id="Group_125" class="social-bubble" data-name="Group 125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.207000732421875" height="42.207000732421875" viewBox="0 0 42.207 42.207">
+    <defs>
+    <clipPath id="clip-path">
+        <rect id="Rectangle_187" data-name="Rectangle 187" width="42.207" height="42.207" fill="none" style="stroke: aliceblue;" class="svg-elem-1"></rect>
+    </clipPath>
+    </defs>
+    <g id="Group_122" data-name="Group 122">
+    <g id="Group_121" data-name="Group 121" clip-path="url(#clip-path)">
+        <path id="Path_46" data-name="Path 46" d="M15.765,13.224A2.47,2.47,0,1,1,13.3,10.755a2.471,2.471,0,0,1,2.469,2.469" transform="translate(0 0)" fill="#fff" fill-rule="evenodd" class="svg-elem-2"></path>
+        <rect id="Rectangle_186" data-name="Rectangle 186" width="4.26" height="13.707" transform="translate(11.165 17.568)" fill="#fff" class="svg-elem-3"></rect>
+        <path id="Path_47" data-name="Path 47" d="M31.381,23.757v7.519H27.124V24.61c0-1.59-.029-3.634-2.214-3.634-2.216,0-2.557,1.731-2.557,3.519v6.781H18.1V17.569h4.086v1.873h.057a4.474,4.474,0,0,1,4.031-2.214c4.314,0,5.11,2.839,5.11,6.529" transform="translate(0 0)" fill="#fff" fill-rule="evenodd" class="svg-elem-4"></path>
+    </g>
+    </g>
+    <g id="Group_124" data-name="Group 124">
+    <g id="Group_123" data-name="Group 123" clip-path="url(#clip-path)">
+        <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="20.1" cy="20.1" rx="20.1" ry="20.1" transform="translate(1.007 1)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2" class="svg-elem-5"></ellipse>
+    </g>
+    </g>
+</svg>

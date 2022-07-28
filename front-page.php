@@ -277,10 +277,20 @@
 </section>
 
 
-<script>
 
-</script>
+<?php get_template_part('/template-parts/menu/main'); ?>
+<?php get_template_part('/template-parts/footer/site', 'footer'); ?>
 
+<a href="#hero" id="scroll-to-page-top" class="gbc-scroll">
+	<svg class="next-section-scroll " xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+		<g id="Group_53" data-name="Group 53" transform="translate(-1772 -949)">
+			<g id="Group_51" data-name="Group 51" transform="translate(1837.24 975.932) rotate(90)">
+				<line id="Line_4" data-name="Line 4" x2="26.136" y2="26.136" transform="translate(0 0)" fill="none" stroke="#fff" stroke-width="5"></line>
+				<line id="Line_5" data-name="Line 5" y1="26.136" x2="26.136" transform="translate(0 24.146)" fill="none" stroke="#fff" stroke-width="5"></line>
+			</g>
 
+		</g>
+	</svg>
+</a>
 
 <?php get_footer(); ?>

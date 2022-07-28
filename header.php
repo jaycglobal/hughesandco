@@ -20,14 +20,20 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
+<?php if(is_front_page()) : ?>
+  <label for="Mobile menu open">
+    <div id="menu-activator" class="menu-activator">
+      <input type="checkbox" class="sr-hide" name="Mobile menu open">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+    </div>
+  </label>
 
-<label for="Mobile menu open">
-  <div id="menu-activator" class="menu-activator">
-    <input type="checkbox" class="sr-hide" name="Mobile menu open">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-    <span class="line line-3"></span>
-</div>
-</label>
+<?php else : ?>
+  <a href="<?php echo home_url();?>" id="to-home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#ffffff" d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" /></svg>
+  </a>
+<?php endif; ?>
 
 

@@ -77,6 +77,48 @@
 //     }
 // }
 
+a#to-home {
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
+  z-index: 5;
+  & svg {
+    width: 100px;
+    @media screen and (max-width: $gridXL) {
+      width: 60px;
+    }
+    @media screen and (max-width: $gridMD) {
+      width: 40px;
+    }
+  }
+  @media screen and (max-width: $gridXL) {
+      top: 3rem;
+      left: 3rem;  
+  }
+  @media screen and (max-width: $gridMD) {
+    top: 2rem;
+    left: 2rem;  
+}
+}
+
+h1.page-title {
+  font-size: 9rem;
+  margin: 0;
+  @media screen and (max-width: $gridLG) {
+    font-size: 6rem;
+  }
+  @media screen and (max-width: $gridMD) {
+    font-size: 4rem;
+  }
+}
+
+.page-template-generic-page section {
+  padding: 6rem 12px;
+}
+
+hr {
+  border-color: #1bacb5;
+}
 
 
 body {
@@ -449,6 +491,7 @@ div#site-menu {
       border-bottom: 2px solid #0FACB5; 
       & > a {
         font-size: inherit;
+        @include headingFont();
       }
 
     }
@@ -494,6 +537,12 @@ body.open-menu {
   background-position: 50% 50%;
   transition: 5s background-position linear;
   color: #fff;
+
+  & h1 {
+    font-size: 9rem;
+    font-weight: lighter;
+    margin: 0px;
+  }
 
   & .hero-img {
     width: 100%;
@@ -553,12 +602,17 @@ body.open-menu {
 }
 
 section {
+  padding: 3rem 0rem;
+}
+
+
+.home section {
   min-height: 450px;
 
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding: 3rem 0rem;
+
   overflow: hidden;
   background-size: cover;
   background-position: 50% 50%;
@@ -1331,12 +1385,15 @@ footer {
         }
       }
 
-      &.copyright-excerpt,
+    &.copyright-excerpt,
       & a {
         margin-top: 1rem;
         font-size: 1.4rem;
       }
     }
+  }
+  & a.internal-link {
+    font-size: 1.6rem;
   }
 }
 
@@ -1499,7 +1556,7 @@ svg.social-bubble:hover .svg-elem-5 {
   // #hero {
   //     background-size: cover;
   // }
-  section {
+  .home section {
     min-height: 450px;
 
     &.full {
@@ -1592,7 +1649,7 @@ svg.social-bubble:hover .svg-elem-5 {
 
 @media screen and (max-width: $gridLG) {
 
-  section {
+  .home section {
     min-height: 350px;
 
     &.full {
@@ -1685,7 +1742,7 @@ svg.social-bubble:hover .svg-elem-5 {
     }
   }
 
-  section {
+  .home section {
 
     &.full {
       & h3.jumbo {
@@ -1727,7 +1784,7 @@ svg.social-bubble:hover .svg-elem-5 {
     flex-direction: column-reverse;
   }
 
-  section {
+  .home section {
     flex-wrap: wrap;
 
     & .container-fluid.bg {
@@ -1797,6 +1854,10 @@ svg.social-bubble:hover .svg-elem-5 {
       margin-top: 0rem;
       padding-top: 3rem;
     }
+
+    & a.internal-link {
+      font-size: 1.4rem;
+    }
   }
 
 
@@ -1823,7 +1884,7 @@ svg.social-bubble:hover .svg-elem-5 {
     }
   }
 
-  section {
+  .home section {
     &.full {
       & h3.jumbo {
         font-size: 10.7rem;
