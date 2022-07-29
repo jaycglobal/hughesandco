@@ -127,6 +127,10 @@
 </section>
 
 <!-- Slider main container -->
+<?php
+$servicesQuery = hughesco_get_services();
+
+?>
 <div class="swiper full-screen-slider">
   <!-- Additional required wrapper -->
   <div class="slider-menu">
@@ -134,8 +138,7 @@
 
     <div class="wrapper">
       <div id="slide-name">
-        <p><a href="#" data-accordlink="<?php echo sanitize_title_with_dashes('Marketing & PR Communications'); ?>">Marketing & PR Communications</a></p>
-
+        <p><a href="#" data-accordlink="<?php echo sanitize_title_with_dashes($servicesQuery->posts[0]->post_title); ?>"><?php echo $servicesQuery->posts[0]->post_title; ?></a></p>
       </div>
     </div>
     <div class="swiper-button-next"></div>
@@ -145,7 +148,6 @@
   <div class="swiper-wrapper h-100">
 
     <?php 
-    $servicesQuery = hughesco_get_services();
     if ($servicesQuery->have_posts()) {
       while ($servicesQuery->have_posts()) {
         $servicesQuery->the_post();

@@ -6916,13 +6916,7 @@ div#site-menu .wrap .services-menu ul li a {
   font-family: "Gotham Book", sans-serif;
 }
 div#site-menu .wrap > .container {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  position: relative;
+  padding-top: 90px;
 }
 div#site-menu .wrap > .container .row > div {
   margin-bottom: 3em;
@@ -7790,6 +7784,9 @@ footer .footer-logo .site-logo {
   top: -35px;
   height: auto;
 }
+footer .footer-logo svg {
+  max-width: 80%;
+}
 footer p {
   margin: 0;
 }
@@ -8164,6 +8161,11 @@ section.split-content .bg {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
   }
+  .qr-contact > div.qr-code img {
+    max-width: 75%;
+    margin: auto;
+    display: block;
+  }
   .split-content--right {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8309,7 +8311,7 @@ input {
 }
 @media screen and (max-height: 800px) {
   div#site-menu {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
   }
   div#site-menu .wrap > .container {
     min-height: unset;
